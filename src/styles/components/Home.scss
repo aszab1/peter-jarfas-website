@@ -2,3 +2,19 @@
   width: 60%;
   height: 60%;
 }
+
+.video-icon, .photo-icon, .awards-logo, .schedule-logo, .comments-logo{
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  margin: 10px;
+  
+}
+
+.photo-div {
+  width: 100px;
+  margin: 10px;
+  border-radius: 50%;
+  border-radius: 10px solid red;
+  background-color: yellow;
+}
