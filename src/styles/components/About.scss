@@ -1,0 +1,38 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  height: 100vh;
+}
+
+.about {
+  width: 60%; /* same as logo size */
+  height: 60%; /* same as logo size */
+  padding: 35px; 
+  border-radius: 50%;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  margin-right: 50px;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}

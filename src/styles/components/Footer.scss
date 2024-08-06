@@ -1,0 +1,33 @@
+.footer {
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  height: 50px;
+}
+
+.footer-p {
+  text-align: center;
+  margin: 0.5em;
+}
+
+
+
+.footer-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adrienn {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+.contact {
+  height: 150px;
+  background-color: #d2caca;
+  display:grid;
+  // justify-content: flex-start;
+  padding: 20px;
+}
