@@ -26,6 +26,7 @@ export default function Home(){
 
   return(
     <>
+    <div className='star-container'>
     <div className='photo-div'>
         <RouterLink to="/kepek">
           <Icon className='photo-icon' icon='fa-solid:camera-retro'></Icon>
@@ -61,19 +62,29 @@ export default function Home(){
           )}
         </AnimatePresence>
       </div>
+      <div className='video-div'>
       <RouterLink to="/videok">
         <Icon className='video-icon' icon='hugeicons:camera-video' />
       </RouterLink>
+      </div>
+      <div className='awards-div'>
       <RouterLink to="/eredmenyek">
-        <Icon className='awards-logo' icon='noto:trophy'></Icon>
+        <Icon className='awards-logo' icon='game-icons:trophy-cup'></Icon>
       </RouterLink>
+      </div>
+      <div className='classes-div'>
       <RouterLink to='/orarend-arak'>
         <Icon className='schedule-logo' icon='grommet-icons:schedules'></Icon>
       </RouterLink>
+      </div>
+      <div className='reviews-div'>
       <RouterLink to='/velemenyek'>
         <Icon className='comments-logo' icon='majesticons:comment-text-line'></Icon>
       </RouterLink>
+      </div>
+      </div>
       <p>Ez egy példa a magyar betűk használatára: Á, É, Í, Ó, Ö, Ő, Ú, Ü, Ű</p>
+
     
     </>
 
