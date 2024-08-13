@@ -2,23 +2,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 50px;
+  margin-top: 1em;
   height: 100vh;
 }
 
 .about {
   width: 50%; /* same as logo size */
-  height: 60%; /* same as logo size */
-  padding: 35px; 
+  height: 80%; /* same as logo size */
+  padding: 15px; 
+  margin: 10px;
   border-radius: 50%;
-  background-color: lightblue;
+  background-color: #c57d32;
+  border: 20px solid #e6b64a;
+  box-shadow: 
+  0 0 0 15px #8e4922,
+  0 0 0 30px #b76e29,
+  0 0 0 50px #e6b64a;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #542e21;
+  font-weight: 600;
+  cursor: pointer;
 }
 
+.peter {
+  width: 30%;
+  height: 40%;
+  border-radius: 20%;
+  margin: 10px;
+  margin-top: 20px;
+  
+}
 .back-button {
   position: absolute;
   margin-right: 50px;

@@ -19,7 +19,7 @@ export default function Home(){
     if (isFlipped) {
       const timer = setTimeout(() => {
         navigate('/rolam')
-      }, 600) 
+      }, 500) 
       return () => clearTimeout(timer)
     }
   }, [isFlipped, navigate])
