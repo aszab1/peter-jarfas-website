@@ -11,20 +11,28 @@
 }
 
 
-.video-icon, .photo-icon, .awards-logo, .schedule-logo, .comments-logo{
+.video-icon,
+.photo-icon,
+.awards-logo,
+.schedule-logo,
+.comments-logo {
   width: 55px;
   height: 50px;
   padding: 5px;
   margin: 10px;
-  color: rgba(231,182,77,255);
-  
+  color: rgba(231, 182, 77, 255);
+
 }
 
-.photo-div, .video-div, .awards-div, .classes-div, .reviews-div {
+.photo-div,
+.video-div,
+.awards-div,
+.classes-div,
+.reviews-div {
   width: 90px;
   border-radius: 50%;
-  border: 7px solid rgba(116,58,34,255);
-  background-color: rgba(135,64,32,255);
+  border: 7px solid rgba(116, 58, 34, 255);
+  background-color: rgba(135, 64, 32, 255);
 }
 
 .photo-div {
@@ -47,7 +55,7 @@
   position: relative;
   top: 140%;
   left: 82%;
-    transform: translate(-100%, -718%);
+  transform: translate(-100%, -718%);
 }
 
 .classes-div {

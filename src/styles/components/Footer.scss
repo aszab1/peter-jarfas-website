@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   bottom: 0;
   width: 100%;
   margin: 0;
@@ -16,6 +17,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #3b4e66;
+  color: #81ADC8;
+  font-weight: 200;
 }
 
 .adrienn {
@@ -25,9 +29,60 @@
 }
 
 .contact {
-  height: 150px;
-  background-color: #d2caca;
-  display:grid;
-  // justify-content: flex-start;
+  height: 200px;
+  background-color: #334459;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 20px;
+  color: #cbba93;
+  font-weight: 400;
+}
+
+.phone{
+  width: 40px;
+  height: 40px;
+  padding: 1px;
+}
+
+.youtube {
+  width: 40px;
+  height: 60px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.phone-div, .email-div, .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  // margin-left: 5em;
+}
+
+.email-div{
+  margin-right: 5em;
+}
+
+.phone-nr, .email-p {
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 0.5em;
+}
+
+.email, .facebook, .insta  {
+  width: 35px;
+  height: 35px;
+  padding: 1px;
+}
+
+.facebook {
+  border-radius: 40%;
+}
+
+.youtube, .insta, .facebook{
+  margin: 4px;
 }
