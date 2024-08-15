@@ -7,7 +7,6 @@ import Videos from './components/Videos.jsx'
 import Awards from './components/Awards.jsx'
 import Classes from './components/Class-table.jsx'
 import Reviews from './components/Reviews.jsx'
-import About from './components/About.jsx'
 
 
 import './index.css'
@@ -42,10 +41,6 @@ const router = createBrowserRouter([
       {
         path: '/velemenyek',
         element: <Reviews />,
-      },
-      {
-        path: '/rolam',
-        element: <About />,
       },
     ]
   }
