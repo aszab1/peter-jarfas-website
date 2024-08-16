@@ -11,6 +11,8 @@ import Reviews from './components/Reviews.jsx'
 
 import './index.css'
 import './styles/main.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 const router = createBrowserRouter([
