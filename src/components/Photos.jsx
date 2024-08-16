@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom'
+import { Icon } from '@iconify/react/dist/iconify.js'
+
 import pic1 from '../assets/images/cool-vibesgirl.jpg'
 import pic2 from '../assets/images/ciaogirl.jpg'
 import grouppic1 from '../assets/images/grouppic1.jpg'
@@ -38,7 +40,7 @@ const handleBackClick = () => {
     <div>
       <img className='swim' src={grouppic2} alt="group picture with the children during class" />
     </div>
-    <button className="back-button" onClick={handleBackClick}>Vissza</button>
+    <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
     </>
 
   )

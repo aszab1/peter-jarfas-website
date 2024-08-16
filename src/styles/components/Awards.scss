@@ -9,7 +9,11 @@
 
 .nav {
   display: flex;
-  gap: 50px;
   margin-top: 50px;
+  font-size: 25px;
 }
 
+button.nav-link {
+  height: 60px;
+  color: black;
+}

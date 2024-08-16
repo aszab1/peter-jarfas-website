@@ -9,8 +9,10 @@ function App() {
 
   return (
     <>
+    <main>
     <Outlet/>
     <Footer />
+    </main>
     </>
   )
 }

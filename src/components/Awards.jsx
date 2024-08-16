@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Tabs, Tab } from 'react-bootstrap'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import { FiChevronDown } from 'react-icons/fi'
 
 import peterswim from '../assets/images/peter-swim.jpeg'
 import Teacher from './Teacher'
@@ -24,7 +26,7 @@ function Image({ src, alt }) {
           ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
           : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
       }
-      transition={{ duration: 1, delay: 1 }}
+      transition={{ duration: 1.5, delay: 0.4 }}
       viewport={{ once: true }}
       onViewportEnter={() => setIsInView(true)}
     >
@@ -46,11 +48,11 @@ export default function Awards() {
     navigate('/')
   }
 
-  const handleTabSelect = (index) => {
-    if (activeTab === index) {
+  const handleTabSelect = (k) => {
+    if (activeTab === k) {
       setActiveTab(null) // Deselect the tab if it's already active
     } else {
-      setActiveTab(index) // Set the active tab to the selected tab
+      setActiveTab(k) // Set the active tab to the selected tab
     }
   }
 
@@ -65,17 +67,20 @@ export default function Awards() {
           id="awards-tabs"
           activeKey={activeTab}
           onSelect={handleTabSelect}
-          className="mt-4"
+          className="mt-6"
+          variant='tabs'
+        
+          justify
         >
-          <Tab eventKey="teacher" title="Mester">
-            {activeTab === 'teacher' && <Teacher />}
+          <Tab eventKey="teacher" title={<span>Mester <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }} /></span>}>
+            {activeTab === "teacher" && <Teacher />}
           </Tab>
-          <Tab eventKey="students" title="Tanítványai">
-            {activeTab === 'students' && <Students />}
+          <Tab eventKey="students" title={<span>Tanítványai <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }}/></span>}>
+            {activeTab === "students" && <Students />}
           </Tab>
         </Tabs>
       </div>
-      <button className="back-button" onClick={handleBackClick}>Vissza</button>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
     </>
   )
 }
