@@ -68,7 +68,7 @@ export default function Awards() {
           activeKey={activeTab}
           onSelect={handleTabSelect}
           className="mt-6"
-          variant='tabs'
+          variant='none'
         
           justify
         >
