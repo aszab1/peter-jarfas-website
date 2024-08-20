@@ -1,0 +1,135 @@
+.timetable {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  margin: 2em 10em 5em 10em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.timetable-h {
+  margin-top: 3em;
+}
+
+.grid-header {
+  display: contents;
+}
+
+.header-item {
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  background-color: #f0f0f0;
+}
+
+.grid-body {
+  display: contents;
+}
+
+.day-column {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.class-item {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.class-item .time {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.class-item .class-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.price-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.price-list-title {
+  font-size: 2em;
+  margin: 2em 0;
+  color: #333;
+}
+
+.price-cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1 1 45%;
+  max-width: 65%;
+  box-sizing: border-box;
+}
+
+.price-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.price-detail {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.price-amount {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .price-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+// Responsive Design 
+
+// @media (max-width: 1200px) {
+//   .timetable {
+//     grid-template-columns: repeat(3, 1fr); /* 3 days in one row */
+//   }
+// }
+
+@media (max-width: 768px) {
+  .timetable {
+    grid-template-columns: repeat(2, 1fr); /* 2 days in one row */
+  }
+}
+
+@media (max-width: 480px) {
+  .timetable {
+    grid-template-columns: 1fr; /* 1 day per row */
+  }
+}

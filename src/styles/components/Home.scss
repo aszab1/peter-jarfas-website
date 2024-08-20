@@ -38,6 +38,7 @@
   color: rgba(231, 182, 77, 255);
 }
 
+
 .photo-div,
 .video-div,
 .awards-div,
@@ -48,6 +49,16 @@
   border-radius: 50%;
   border: 7px solid rgba(116, 58, 34, 255);
   background-color: rgba(135, 64, 32, 255);
+  transition: transform 0.2s ease;
+}
+
+// .photo-div:hover,
+.logo-conatiner:hover,
+.video-div:hover,
+.awards-div:hover,
+.classes-div:hover,
+.reviews-div:hover {
+  transform: scale(1.1); 
 }
 
 .photo-div {
