@@ -7,39 +7,44 @@
 
 }
 
-.uszoda-div {
-  background-color:#f7af6c ;
-}
-
 .uszoda {
   width: 50%;
   height: 40%;
   margin: 2em 5em;
-  // clip-path: polygon(4% 15%, 4% 0, 15% 0, 85% 0%, 95% 0, 95% 15%, 96% 85%, 96% 100%, 85% 100%, 15% 100%, 3% 100%, 3% 85%);
   border-radius: 20px;
-
 }
 
 svg.bubbles{
   position: relative;
-
-  
-}
-.happy-div{
-  background-color: #f7af6c ;
 }
 
-.swim-group-pic {
+.swim-group-pic{
   width: 60%;
   height: 50%;
   margin: 5em;
 }
 
-.swim-div, .group {
+.swim-div, .girls {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 10em;
+}
+
+
+.group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10em;
+}
+
+.dive {
+  width: 50%;
+  height: 40%;
+  margin-top: 2em;
+  border-radius: 20px;
 }
 
 
@@ -60,4 +65,16 @@ svg.bubbles{
   clip-path: polygon(1% 40%, 20% 23%, 15% 0%, 85% 0%, 83% 13%, 100% 15%, 100% 71%, 81% 80%, 85% 100%, 15% 100%, 29% 80%, 0% 85%);
 }
 
+.seniors, .senior-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.negyen, .senior-group  {
+  width: 40%;
+  height: 30%;
+  margin: 0 5em 3em 5em;
+  border-radius: 20px;
+}
 

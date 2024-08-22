@@ -4,10 +4,11 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import pic1 from '../assets/images/cool-vibesgirl.jpg'
 import pic2 from '../assets/images/ciaogirl.jpg'
 import grouppic1 from '../assets/images/grouppic1.jpg'
-import grouppic2 from '../assets/images/grouppic2.jpg'
 import grouppic3 from '../assets/images/grouppic3.jpg'
 import swimlesson from '../assets/images/uszasoktatas.jpg'
 import negyen from '../assets/images/negyen.jpg'
+import fejes from '../assets/images/fejes-ugras.jpeg'
+import seniorGroupPic from '../assets/images/senior-group.jpeg'
 
 
 export default function Photos(){
@@ -27,7 +28,7 @@ const handleBackClick = () => {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#F6EDD6"><rect fill="#F7AF6C" width="100%" height="100%"/>
     <path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z"></path>
     </svg>
-    <div className='uszoda-div'>
+    <div className='uszoda-div' style={{backgroundColor: '#f7af6c'}}>
     <svg
     className='bubbles'
     xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +42,7 @@ const handleBackClick = () => {
   <img className='uszoda' src={grouppic3} alt="in front of natatorium" />
 </div>
 
-<div className='happy-div'>
+<div className='happykids-div' style={{backgroundColor: '#f7af6c'}}>
     <div className='group'>
       <img className='swim-group-pic' src={grouppic1} alt="swim lesson, group picture" />
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium numquam dolorum, vero mollitia velit ipsam ipsum, sequi assumenda quam ut obcaecati ratione ullam dolor cum veniam nemo pariatur repellat quos.</p>
@@ -50,16 +51,29 @@ const handleBackClick = () => {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#F7AF6C"><rect fill="#F6EDD6" width="100%" height="100%"/>
     <path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z"></path>
     </svg>
-    <div className='group'>
+    <div className='girls'>
       <img className='pic1' src={pic1} alt="with one of the student" />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias itaque aut minus ullam reiciendis provident fugiat, nisi necessitatibus, saepe ipsa aliquid officia quaerat quisquam error incidunt magni, iusto autem? Ut!</p>
       <img className='pic2' src={pic2} alt="with one of the student" />
 
     </div>
-    <div>
-      <img className='swim' src={negyen} alt="Peter and his teammates during competition" />
+    <div className='group'>
+    <img className='dive' src={fejes} alt="Peter diving during competition" />
     </div>
-    <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#F6EDD6"><rect fill="#F7AF6C" width="100%" height="100%"/>
+    <path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z"></path>
+    </svg>
+    <div className='seniors' style={{ backgroundColor: '#f7af6c'}}>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat culpa iusto architecto repellendus voluptatem corporis sint totam saepe minima, esse sed ut, ratione et iste quibusdam, excepturi ipsa blanditiis!</p>
+      <img className='negyen' src={negyen} alt="Peter and his teammates during competition" /> 
+    
+    </div>
+    <div className='senior-div' style={{ backgroundColor: '#f7af6c'}}>
+      <img className='senior-group' src={seniorGroupPic} alt="Peter with his swim team" />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat id vitae quam facere adipisci accusamus est. Magnam sunt voluptas aperiam harum excepturi tempore, necessitatibus rem id ab unde. Amet, doloribus.</p>
+    </div>
+    <button className="back-button"  onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
+
     </div>
 
   )

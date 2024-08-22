@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import '../styles/components/Class-tables.scss'
 import Pricelist from './Pricelist'
+import grouppic2 from '../assets/images/grouppic2.jpg'
 
 export default function Classes() {
 
@@ -45,6 +46,7 @@ export default function Classes() {
   const daysOfWeek = ['HÉTFŐ', 'KEDD', 'SZERDA', 'CSÜTÖRTÖK', 'PÉNTEK', 'SZOMBAT']
   return (
     <>
+    <img src={grouppic2} alt="" />
       <h2 className='timetable-h'>Órarend</h2>
       <div className="timetable">
         {daysOfWeek.map(day => (
