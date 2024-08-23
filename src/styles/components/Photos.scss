@@ -7,15 +7,27 @@
 
 }
 
+.uszoda-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .uszoda {
   width: 50%;
-  height: 40%;
+  height: auto;
   margin: 2em 5em;
   border-radius: 20px;
 }
 
 svg.bubbles{
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 200px; 
+  height: 200px; 
 }
 
 .swim-group-pic{
@@ -46,8 +58,6 @@ svg.bubbles{
   margin-top: 2em;
   border-radius: 20px;
 }
-
-
 
 
 .pic1 {
