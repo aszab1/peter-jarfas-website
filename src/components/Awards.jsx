@@ -10,35 +10,6 @@ import Teacher from './Teacher'
 import Students from './Students'
 
 
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`
-
-
-function Image({ src, alt }) {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-
-  return (
-    <motion.div
-      initial={false}
-      animate={
-        isLoaded && isInView
-          ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-          : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-      }
-      transition={{ duration: 1.5, delay: 0.4 }}
-      viewport={{ once: true }}
-      onViewportEnter={() => setIsInView(true)}
-    >
-      <img 
-        src={src} 
-        alt={alt} 
-        onLoad={() => setIsLoaded(true)} 
-        className="swim-comp"
-      />
-    </motion.div>
-  )
-}
 
 export default function Awards() {
   const [activeTab, setActiveTab] = useState(null)
@@ -56,12 +27,20 @@ export default function Awards() {
     }
   }
 
+  
 
 
   return (
     <>
       <div className="text-center py-5">
-        <Image src={peterswim} alt="peter during competition" />
+      <motion.img
+className="swim-comp"
+src={peterswim}
+alt="peter during competition"
+initial={{ maskImage: 'repeating-linear-gradient(-0deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
+animate={{ maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 100%, transparent 100%, transparent 100%)' }}
+transition={{ duration: 1.5, ease: 'easeInOut' }}
+/>
 
         <Tabs
           id="awards-tabs"

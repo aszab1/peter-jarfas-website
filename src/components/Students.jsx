@@ -1,28 +1,61 @@
-import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { motion, useInView } from 'framer-motion'
 import podiumboy from '../assets/images/podiumboy.png'
 import medalboy from '../assets/images/medalboy.jpg'
 import medalgirl from '../assets/images/medalgirl.jpg'
 
 export default function Students() {
+
+  const student1Ref = useRef(null)
+  const student2Ref = useRef(null)
+
+
+  const student1InView = useInView(student1Ref, { once: true })
+  const student2InView = useInView(student2Ref, { once: true })
+
+  const [isLoaded, setIsLoaded] = useState(false)
+
   return (
     <motion.div layoutId="nav-item">
       <div className='student1'>
-        <img className='horizontal-pic' src={podiumboy} alt='' />
+        <motion.img ref={student1Ref}
+          className='horizontal-pic' src={podiumboy} alt='Picture of Peters student'
+          initial={{ maskImage: 'repeating-linear-gradient(90deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
+          animate={{ maskImage: 'repeating-linear-gradient(90deg, black 0%, black 100%, transparent 100%, transparent 100%)' }}
+          transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
+          viewport={{ once: true }}
+          onLoad={() => setIsLoaded(true)}
+
+        />
         <span className='student1-text'>
-        <h5>Nemere Hunor Péter</h5>
-        <p>Bronzérem</p>
-        <p>50 m gyorsúszás</p>
-        <p>Diákolimpia megyei döntő, 2023, I. korcsoport </p>
+          <h5>Nemere Hunor Péter</h5>
+          <p>Bronzérem</p>
+          <p>50 m gyorsúszás</p>
+          <p>Diákolimpia megyei döntő, 2023, I. korcsoport </p>
         </span>
-        <img className='vertical-pic' src={medalboy} alt='' />
+        <motion.img ref={student1Ref}
+          className='vertical-pic' src={medalboy} alt='Picture of Peter and his student, Peter'
+          initial={{ maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
+          animate={isLoaded && student1InView ? { maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 100%, transparent 100%, transparent 100%)' } : {}}
+          transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
+          viewport={{ once: true }}
+          onLoad={() => setIsLoaded(true)}
+        />
       </div>
       <div className='student2'>
-        <img className='vertical-pic1' src={medalgirl} alt='' />
+        <motion.img ref={student2Ref}
+          className='vertical-pic1' src={medalgirl} alt='Picture of Peter and his student, Luca'
+          initial={{ maskImage: 'repeating-linear-gradient(90deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
+          animate={isLoaded && student2InView ? { maskImage: 'repeating-linear-gradient(90deg, black 0%, black 100%, transparent 100%, transparent 100%)' } : {}}
+          transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
+          viewport={{ once: true }}
+          onLoad={() => setIsLoaded(true)}
+        />
         <span>
-        <h5>Kiss Luca</h5>
-        <p>Diákolimpia területi bajnoka, 2023</p>
-        <p>100 m gyorsúszás</p>
-        <p>100 m hátúszás</p>
+          <h5>Kiss Luca</h5>
+          <p>Diákolimpia területi bajnoka, 2023</p>
+          <p>100 m gyorsúszás</p>
+          <p>100 m hátúszás</p>
         </span>
       </div>
     </motion.div>
