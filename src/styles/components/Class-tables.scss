@@ -113,23 +113,27 @@
   }
 }
 
+.students-in-pool {
+  width: 60%;
+  margin-top: 4em;
+}
 
 // Responsive Design 
 
 // @media (max-width: 1200px) {
 //   .timetable {
-//     grid-template-columns: repeat(3, 1fr); /* 3 days in one row */
+//     grid-template-columns: repeat(3, 1fr); 
 //   }
 // }
 
 @media (max-width: 768px) {
   .timetable {
-    grid-template-columns: repeat(2, 1fr); /* 2 days in one row */
+    grid-template-columns: repeat(2, 1fr); // 2 days in one row 
   }
 }
 
 @media (max-width: 480px) {
   .timetable {
-    grid-template-columns: 1fr; /* 1 day per row */
+    grid-template-columns: 1fr; 
   }
 }

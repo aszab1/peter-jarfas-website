@@ -46,7 +46,7 @@ export default function Classes() {
   const daysOfWeek = ['HÉTFŐ', 'KEDD', 'SZERDA', 'CSÜTÖRTÖK', 'PÉNTEK', 'SZOMBAT']
   return (
     <>
-    <img src={grouppic2} alt="" />
+    <img className='students-in-pool' src={grouppic2} alt="Picture of Peter and his students in the pool" />
       <h2 className='timetable-h'>Órarend</h2>
       <div className="timetable">
         {daysOfWeek.map(day => (

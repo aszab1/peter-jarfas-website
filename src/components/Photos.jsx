@@ -123,7 +123,7 @@ export default function Photos() {
           onLoad={() => setIsLoaded(true)}
         />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias itaque aut minus ullam reiciendis provident fugiat, nisi necessitatibus, saepe ipsa aliquid officia quaerat quisquam error incidunt magni, iusto autem? Ut!</p>
-        <motion.img className='pic2' src={pic2} alt="with one of the student" 
+        <motion.img ref={girlsRef} className='pic2' src={pic2} alt="with one of the student" 
         initial={false}
         animate={
           isLoaded && girlsInView
