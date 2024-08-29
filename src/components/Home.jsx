@@ -19,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div className='home-container'>
       <div className='star-container'>
         <div className='content-container'>
         <div className='photo-div'>
@@ -79,6 +79,6 @@ export default function Home() {
         </div>
       </div>
       </div>
-    </>
+      </div>
   )
 }

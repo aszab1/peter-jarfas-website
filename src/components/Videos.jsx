@@ -13,14 +13,14 @@ const handleBackClick = () => {
     return (
     <div>
 
-      <YouTubeVideoCard 
-        videoSrc="https://www.youtube.com/embed/1YKE_UDI0fg" 
-        videoTitle="First Video"
-      />
+<YouTubeVideoCard 
+  videoSrc="https://www.youtube.com/embed/1YKE_UDI0fg" 
+  videoTitle={`Belgrád Masters EB 2024,\n4x 50 férfi gyors váltó Budapesti Delfinek`}
+/>
       
       <YouTubeVideoCard 
         videoSrc="https://www.youtube.com/embed/7uQzytVWTCY" 
-        videoTitle="Second Video"
+        videoTitle={`Belgrád Masters EB 2024,\n4x 50 mix vegyes váltó`}
       />
       <YouTubeVideoCard 
         videoSrc="https://www.youtube.com/embed/VideoID" 
