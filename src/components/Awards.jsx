@@ -32,7 +32,7 @@ export default function Awards() {
 
   return (
     <>
-      <div className="text-center py-5" style={{ backgroundColor: '#B97129'}}>
+      <div className="text-center py-5" style={{ backgroundColor: '#67a3f6'}}>
       <motion.img
 className="swim-comp"
 src={peterswim}
