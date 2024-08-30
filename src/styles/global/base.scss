@@ -29,6 +29,24 @@ main {
   background-color: rgba(241, 239, 239, 0.5);
 }
 
+.slide-button:focus,
+.slide-button:active,
+.slide-button:focus-visible {
+  outline: none !important;  
+  box-shadow: none !important;  
+}
+
+button:focus {
+  outline: none !important; 
+  box-shadow: none !important;
+}
+
+button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
 // @media only screen and (max-width: 450px) {
 //   main {
 //     font-size: 14px;
