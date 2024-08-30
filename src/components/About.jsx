@@ -8,15 +8,17 @@ export default function About() {
       <motion.div
         className="about"
         initial={{ rotateY: 0 }}
-        animate={{ rotateY: 0 }}
-        exit={{ rotateY: 90, opacity: 0 }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        animate={{ rotateY: 0, opacity: 1 }}
+        exit={{ rotateY: 95, opacity: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <img
           className="peter"
           src={peter}
           alt="Picture of Peter Jarfas"
         />
+        
+        <div className='text-div'>
         <p>Járfás Péter vagyok, 2020 óta foglalkozom úszásoktatással.</p>
         <p>
           Célom, hogy minden gyermek vízbiztos legyen, <br />
@@ -32,6 +34,7 @@ export default function About() {
           ezért minden évben megrendezzük a Mikulás kupát <br />és egy tavaszi versenyt is,
           <br /> ahol minden résztvevő nyer valamit.
         </p>
+        </div>
       </motion.div>
     </div>
   )

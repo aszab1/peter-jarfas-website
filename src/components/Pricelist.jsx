@@ -1,4 +1,4 @@
-import '../styles/components/Class-tables.scss'
+import '../styles/components/TimeTable.scss'
 
 export default function Pricelist(){
 

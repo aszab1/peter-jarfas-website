@@ -35,20 +35,20 @@ export default function Home() {
                 className='logo'
                 src={logo}
                 alt={`A logo of Peter's initials and the sea`}
-                initial={{ rotateY: 0 }}
+                initial={{ rotateY: 90 }}
                 animate={{ rotateY: 0 }}
-                exit={{ rotateY: 120, opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut' }}
+                exit={{ rotateY: 90, opacity: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', opacity: 0 }}
                 key="front"
               />
             )}
             {isFlipped && (
               <motion.div
                 className='about-me'
-                initial={{ opacity: 0 }}
+                initial={{ rotateY: -90, opacity: 0 }}
                 animate={{ rotateY: 0, opacity: 1 }}
                 exit={{ rotateY: -90 }}
-                transition={{ duration: 1, ease: 'easeInOut', opacity: 0 }}
+                transition={{ duration: 0.8, ease: 'easeIn',  opacity: 0 }}
                 key="back"
                 onClick={handleAboutClick}
               >

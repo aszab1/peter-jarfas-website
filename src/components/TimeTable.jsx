@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import '../styles/components/Class-tables.scss'
+import '../styles/components/TimeTable.scss'
 import Pricelist from './Pricelist'
 import grouppic2 from '../assets/images/grouppic2.jpg'
 

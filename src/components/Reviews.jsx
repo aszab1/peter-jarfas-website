@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useRef } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Modal, ModalOverlay, ModalContent, useDisclosure, ModalBody, ModalCloseButton, } from '@chakra-ui/react'
-import { ChakraProvider, Box, FormControl, FormHelperText, FormErrorMessage, FormLabel, Input, Textarea, Button, Stack, HStack, IconButton } from '@chakra-ui/react'
+import { ChakraProvider, Box, FormControl, FormHelperText, FormErrorMessage, FormLabel, Input, Textarea, Stack, HStack, IconButton } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons'
 
 
@@ -22,7 +22,7 @@ export default function Reviews() {
   const handleSubmit = (e) => {
     e.preventDefault()
     onClose() // Close the modal
-    finalRef.current?.focus() // Set focus back to the "Save Reviews" section
+    finalRef.current?.focus() // Set focus back to the Save Reviews section
   }
 
   return (
@@ -41,7 +41,7 @@ export default function Reviews() {
           _active: { outline: 'none !important', boxShadow: 'none !important' },
         }}
         >
-          Leave Review
+          Leave a Review
         </button>
         <Modal size={'lg'} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose} isCentered>
           <ModalOverlay bg='none'
@@ -84,7 +84,7 @@ export default function Reviews() {
 
                     <FormControl id="review" isRequired>
                       <FormLabel>Your Review</FormLabel>
-                      <Textarea placeholder="Write your review here..." />
+                      <Textarea h='200px' placeholder="Write your review here..." />
                       {/* <FormErrorMessage>{form.errors.name}</FormErrorMessage> */}
                     </FormControl>
 

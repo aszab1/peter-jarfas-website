@@ -5,7 +5,7 @@ import Home from './components/Home.jsx'
 import Photos from './components/Photos.jsx'
 import Videos from './components/Videos.jsx'
 import Awards from './components/Awards.jsx'
-import Classes from './components/Class-table.jsx'
+import Classes from './components/TimeTable.jsx'
 import Reviews from './components/Reviews.jsx'
 
 
