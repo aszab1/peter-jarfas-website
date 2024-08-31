@@ -56,7 +56,9 @@ svg.bubbles{
   width: 50%;
   height: 40%;
   margin-top: 2em;
-  border-radius: 20px;
+  
+  clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 70%, 70% 100%, 0 100%, 0% 70%, 0% 30%);
+
 }
 
 
