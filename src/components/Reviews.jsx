@@ -1,103 +1,86 @@
 import { useNavigate } from 'react-router-dom'
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import { Modal, ModalOverlay, ModalContent, useDisclosure, ModalBody, ModalCloseButton, } from '@chakra-ui/react'
-import { ChakraProvider, Box, FormControl, FormHelperText, FormErrorMessage, FormLabel, Input, Textarea, Stack, HStack, IconButton } from '@chakra-ui/react'
+import ReviewFormModal from './ReviewFormModal'
+import { db } from '../utils/fireBaseConfig.js'
+import { collection, addDoc, getDocs, query, where, orderBy } from 'firebase/firestore'
 import { StarIcon } from '@chakra-ui/icons'
-
 
 
 export default function Reviews() {
 
   const navigate = useNavigate()
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const finalRef = useRef(null)
+  const [reviews, setReviews] = useState([])
+  
 
-  const [rating, setRating] = useState(0)
+  useEffect(() => {
+    // Fetch reviews from Firestore when the component mounts
+    const fetchReviews = async () => {
+      const q = query(collection(db, 'reviews'), orderBy('timestamp', 'desc'))
+      const querySnapshot = await getDocs(q)
+      setReviews(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+    }
+    fetchReviews()
+  }, [])
+
 
   const handleBackClick = () => {
     navigate('/')
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    onClose() // Close the modal
-    finalRef.current?.focus() // Set focus back to the Save Reviews section
+  const handleReviewSubmit = async ({ name, email, rating, review }, setError) => {
+    // Check if a review with the same email already exists
+    try {
+      const q = query(collection(db, 'reviews'), where('email', '==', email))
+      const existingReviews = await getDocs(q)
+
+      if (!existingReviews.empty) {
+        setError('email', 'A review has already been submitted with this email address.')
+        return
+      }
+
+      await addDoc(collection(db, 'reviews'), {
+        name,
+        email,
+        rating,
+        review,
+        timestamp: new Date(),
+      })
+      
+      // Fetch the updated list of reviews after adding a new one
+      const updatedReviews = await getDocs(query(collection(db, 'reviews')))
+      setReviews(updatedReviews.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+    } catch (error) {
+      console.error('Error submitting review:', error)
+      setError('submit', 'Failed to submit the review. Please try again.')
+    }
   }
+
+  
 
   return (
     <>
       <h2>Vélemények</h2>
-      <ChakraProvider>
-        <Box ref={finalRef} tabIndex={-1} aria-label='Focus moved to this box'>
-        </Box>
-        <button className='slide-button' 
-        onClick={onOpen}
-        style={{
-          outline: 'none !important',
-          boxShadow: 'none !important',
-          _focus: { outline: 'none !important', boxShadow: 'none !important' },
-          _focusVisible: { outline: 'none !important', boxShadow: 'none !important' },
-          _active: { outline: 'none !important', boxShadow: 'none !important' },
-        }}
-        >
-          Leave a Review
-        </button>
-        <Modal size={'lg'} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose} isCentered>
-          <ModalOverlay bg='none'
-            backdropFilter='auto'
-            backdropInvert='60%'
-            backdropBlur='2px' />
-          <ModalContent>
-            <ModalCloseButton />
-            <ModalBody>
+      <ReviewFormModal onSubmit={handleReviewSubmit} />
+      {reviews.map((review) => {
+        // Format the timestamp to a readable date format (e.g., YYYY-MM-DD)
+        const formattedDate = review.timestamp
+          ? new Date(review.timestamp.seconds * 1000).toLocaleDateString()
+          : 'Date not available';
 
-              <Box maxWidth="500px" mx="auto" mt={10} p={6} borderWidth={1} borderRadius="lg" boxShadow="lg">
-                <form onSubmit={handleSubmit}>
-                  <Stack spacing={6}>
-                    <FormControl id="name" isRequired>
-                      <FormLabel>Név</FormLabel>
-                      <Input type="text" placeholder="Enter your name" />
-                    </FormControl>
-
-                    <FormControl id="email" isRequired>
-                      <FormLabel>Email</FormLabel>
-                      <Input type="email" placeholder="Enter your email" />
-                      <FormHelperText>We will never share your email.</FormHelperText>
-                    </FormControl>
-
-                    <FormControl id="rating" isRequired>
-                      <FormLabel>How many stars?</FormLabel>
-                      <HStack>
-                        {[...Array(5)].map((_, i) => (
-                          <IconButton
-                            key={i}
-                            icon={<StarIcon />}
-                            variant={i < rating ? "solid" : "outline"}
-                            colorScheme="yellow"
-                            onClick={() => setRating(i + 1)}
-                            aria-label={`Rate ${i + 1} stars`}
-                          />
-                        ))}
-                      </HStack>
-                    </FormControl>
-
-                    <FormControl id="review" isRequired>
-                      <FormLabel>Your Review</FormLabel>
-                      <Textarea h='200px' placeholder="Write your review here..." />
-                      {/* <FormErrorMessage>{form.errors.name}</FormErrorMessage> */}
-                    </FormControl>
-
-                    <button className='slide-button' type="submit">
-                      Submit
-                    </button>
-                  </Stack>
-                </form>
-              </Box>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      </ChakraProvider>
+        return (
+          <div key={review.id}>
+            <h4>{review.name}</h4>
+            <p>{review.review}</p>
+            <div>
+              {Array.from({ length: review.rating }, (_, i) => (
+                <StarIcon key={i} color="yellow.400" />
+              ))}
+            </div>
+            <p>{formattedDate}</p>
+            </div>
+        )
+})}
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
     </>
 

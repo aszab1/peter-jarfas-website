@@ -26,8 +26,8 @@ export default function Students() {
 <div className='student1'>
         <motion.img ref={peterStudentsRef}
           className='peter-students' src={peterStudents} alt='Picture of Peter and his students during competition'
-          initial={{ maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
-          animate={isLoaded && peterStudentsInView ? { maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 100%, transparent 100%, transparent 100%)' } : {}}
+          initial={{ maskImage: 'repeating-linear-gradient(90deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
+          animate={isLoaded && peterStudentsInView ? { maskImage: 'repeating-linear-gradient(90deg, black 0%, black 100%, transparent 100%, transparent 100%)' } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
           viewport={{ once: true }}
           onLoad={() => setIsLoaded(true)}
@@ -42,7 +42,7 @@ export default function Students() {
         <motion.img ref={student1Ref}
           className='horizontal-pic' src={podiumboy} alt='Picture of Peters student'
           initial={{ maskImage: 'repeating-linear-gradient(90deg, black 0%, black 0%, transparent 0%, transparent 100%)' }}
-          animate={{ maskImage: 'repeating-linear-gradient(90deg, black 0%, black 100%, transparent 100%, transparent 100%)' }}
+          animate={isLoaded && student1InView ? { maskImage: 'repeating-linear-gradient(90deg, black 0%, black 100%, transparent 100%, transparent 100%)' } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
           viewport={{ once: true }}
           onLoad={() => setIsLoaded(true)}
