@@ -5,13 +5,15 @@ import ReviewFormModal from './ReviewFormModal'
 import { db } from '../utils/fireBaseConfig.js'
 import { collection, addDoc, getDocs, query, where, orderBy } from 'firebase/firestore'
 import { StarIcon } from '@chakra-ui/icons'
+import { Box, Flex, Text, Heading, SimpleGrid } from '@chakra-ui/react';
+
 
 
 export default function Reviews() {
 
   const navigate = useNavigate()
   const [reviews, setReviews] = useState([])
-  
+
 
   useEffect(() => {
     // Fetch reviews from Firestore when the component mounts
@@ -46,7 +48,7 @@ export default function Reviews() {
         review,
         timestamp: new Date(),
       })
-      
+
       // Fetch the updated list of reviews after adding a new one
       const updatedReviews = await getDocs(query(collection(db, 'reviews')))
       setReviews(updatedReviews.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
@@ -56,33 +58,60 @@ export default function Reviews() {
     }
   }
 
-  
+
 
   return (
     <>
-      <h2>Vélemények</h2>
+      <h3 className='reviews-h'>Vélemények</h3>
       <ReviewFormModal onSubmit={handleReviewSubmit} />
-      {reviews.map((review) => {
-        // Format the timestamp to a readable date format (e.g., YYYY-MM-DD)
-        const formattedDate = review.timestamp
-          ? new Date(review.timestamp.seconds * 1000).toLocaleDateString()
-          : 'Date not available';
+      <div className='div-grid'>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+        {reviews.map((review) => (
+          <Box className='review-box'
+            key={review.id}
+            p={25}
+            shadow="md"
+            // borderWidth="20px"
+            background="white"
+            borderRadius="md"
+            // m={30}
+          >
+            <Flex direction="row" align="stretch" >
 
-        return (
-          <div key={review.id}>
-            <h4>{review.name}</h4>
-            <p>{review.review}</p>
-            <div>
-              {Array.from({ length: review.rating }, (_, i) => (
-                <StarIcon key={i} color="yellow.400" />
-              ))}
-            </div>
-            <p>{formattedDate}</p>
-            </div>
-        )
-})}
+              <Flex direction="column" flex="1" alignItems="center" justifyContent="center" >
+
+                <Heading as="h5" size="sm" mb={2} p={10}>
+                  {review.name}
+                </Heading>
+
+                <Flex align="center" mb={2} p={10} color={'gold'}>
+                  {Array.from({ length: review.rating }, (_, i) => (
+                    <StarIcon key={i} color="yellow.400" />
+                  ))}
+                </Flex>
+
+                <Text p={10} fontSize="sm" color="gray.500">
+                  {new Date(review.timestamp.seconds * 1000).toLocaleDateString()}
+                </Text>
+              </Flex>
+
+              <div
+              style={{
+                width: '1.5px',
+                backgroundColor: 'grey',
+                margin: '0 1px',
+              }}
+            />
+
+              <Flex flex="2" direction="column"  justifyContent="center" >
+                <Text>{review.review}</Text>
+              </Flex>
+            </Flex>
+          </Box>
+        ))}
+      </SimpleGrid>
+      </div>
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
     </>
-
   )
 }

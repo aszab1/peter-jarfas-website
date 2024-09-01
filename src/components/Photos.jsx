@@ -67,7 +67,7 @@ export default function Photos() {
         <path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z"></path>
       </svg>
       <div
-        className='uszoda-div' style={{ backgroundColor: '#f7af6c' }}
+        className='uszoda-div' style={{ backgroundColor: '#eb8928' }}
       >
         <svg
           className='bubbles'
@@ -157,7 +157,7 @@ export default function Photos() {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#F6EDD6"><rect fill="#F7AF6C" width="100%" height="100%" />
         <path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z"></path>
       </svg>
-      <div className='seniors' style={{ backgroundColor: '#f7af6c' }}>
+      <div className='seniors' style={{ backgroundColor: '#915234' }}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat culpa iusto architecto repellendus voluptatem corporis sint totam saepe minima, esse sed ut, ratione et iste quibusdam, excepturi ipsa blanditiis!</p>
         <motion.img ref={negyenRef}
         className='negyen' src={negyen} alt="Peter and his teammates during competition"
@@ -173,7 +173,7 @@ export default function Photos() {
         />
 
       </div>
-      <div className='senior-div' style={{ backgroundColor: '#f7af6c' }}>
+      <div className='senior-div' style={{ backgroundColor: '#874121' }}>
         <motion.img ref={seniorsRef}
         className='senior-group' src={seniorGroupPic} alt="Peter with his swim team" 
         initial={false}

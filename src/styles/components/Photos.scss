@@ -19,6 +19,7 @@
   height: auto;
   margin: 2em 5em;
   border-radius: 20px;
+  background-color: blue;
 }
 
 svg.bubbles{
@@ -57,8 +58,6 @@ svg.bubbles{
   height: 40%;
   margin-top: 2em;
   
-  clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 70%, 70% 100%, 0 100%, 0% 70%, 0% 30%);
-
 }
 
 

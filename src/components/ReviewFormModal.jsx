@@ -20,8 +20,9 @@ import {
 import { StarIcon } from '@chakra-ui/icons'
 
 export default function ReviewFormModal({ onSubmit }) {
-  const { isOpen, onOpen, onClose, onCloseComplete } = useDisclosure();
-  const finalRef = useRef(null);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  //  onCloseComplete to the above
+  const finalRef = useRef(null)
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -97,7 +98,7 @@ export default function ReviewFormModal({ onSubmit }) {
               <form onSubmit={handleSubmit}>
                 <Stack spacing={6}>
                   <FormControl id="name" isRequired isInvalid={!!errors.name}>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Név</FormLabel>
                     <Input
                       type="text"
                       placeholder="Enter your name"
