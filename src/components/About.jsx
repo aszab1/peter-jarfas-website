@@ -1,8 +1,12 @@
 import peter from '../assets/images/tucci.jpeg'
+import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
 
 export default function About() {
+
+  const { t, i18n } = useTranslation()
+
   return (
     <div className="about-container">
       <motion.div
@@ -19,7 +23,7 @@ export default function About() {
         />
         
         <div className='text-div'>
-        <p>Járfás Péter vagyok, 2020 óta foglalkozom úszásoktatással.</p>
+        <p>{t("introName")}</p>
         <p>
           Célom, hogy minden gyermek vízbiztos legyen, <br />
           elsajátítsa a gyors-, hát- és mellúszást, és szeresse, amit csinál. <br />

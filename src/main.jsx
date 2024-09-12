@@ -7,6 +7,7 @@ import Videos from './components/Videos.jsx'
 import Awards from './components/Awards.jsx'
 import Classes from './components/TimeTable.jsx'
 import Reviews from './components/Reviews.jsx'
+import './i18n'
 
 
 import './index.css'
