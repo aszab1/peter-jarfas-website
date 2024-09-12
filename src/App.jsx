@@ -88,7 +88,7 @@ function App() {
   return (
     <>
     <main>
-    <Flex justifyContent="flex-end" alignItems="center" mt={4} mr={80}>
+    <Flex justifyContent="flex-end" alignItems="center" paddingTop={14} paddingEnd={80} style={{backgroundColor: 'inherit',}}>
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="language-switch" mb="0" mr={2}>
             </FormLabel>

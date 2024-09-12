@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function About() {
 
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <div className="about-container">
@@ -23,21 +23,12 @@ export default function About() {
         />
         
         <div className='text-div'>
-        <p>{t("introName")}</p>
-        <p>
-          Célom, hogy minden gyermek vízbiztos legyen, <br />
-          elsajátítsa a gyors-, hát- és mellúszást, és szeresse, amit csinál. <br />
-          Emellett a versenyző gyerekeknek megtanítom a pillangóúszás alapjait is.
-        </p>
-        <p>
-          Aktívan versenyzem a szenior úszásban, példát mutatva tanítványaimnak. <br />
-          Számos eredményt értem el, köztük arany- és ezüstérmeket az EB-n.
-        </p>
-        <p>
-          Hiszem, hogy a versenyek a fejlődés legjobb mércéi, <br />
-          ezért minden évben megrendezzük a Mikulás kupát <br />és egy tavaszi versenyt is,
-          <br /> ahol minden résztvevő nyer valamit.
-        </p>
+        <p>{t("intro")}</p>
+        <p> {t("goal1")}<br />{t("goal2")} <br />{t("goal3")}</p>
+        
+        <p>{t("aboutComp1")}<br />{t("aboutComp2")} </p>
+
+        <p>{t("belief1")}<br />{t("belief2")}<br />{t("belief3")} <br /> {t("belief4")} </p>
         </div>
       </motion.div>
     </div>
