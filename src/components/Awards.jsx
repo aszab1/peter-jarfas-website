@@ -48,7 +48,6 @@ transition={{ duration: 1.5, ease: 'easeInOut' }}
           onSelect={handleTabSelect}
           className="mt-6"
           variant='none'
-        
           justify
         >
           <Tab eventKey="teacher" title={<span>Mester <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }} /></span>}>
