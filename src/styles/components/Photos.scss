@@ -3,7 +3,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 15em;
+  margin: -5px 15em;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background-color: #82C4FF;
+  
 }
 
 .swim-lesson {
@@ -15,6 +20,7 @@
 
 p {
   padding: 2em;
+  font-weight: 470;
 }
 
 .uszoda-div {
@@ -132,5 +138,9 @@ svg.bubbles2 {
   height: 30%;
   margin: 0 5em 3em 5em;
   border-radius: 20px;
+}
+
+.swim-lesson, .uszoda, .swim-group-pic, .pic1, .pic2, .dive, .negyen, .senior-group {
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
