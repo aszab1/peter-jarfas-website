@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Tabs, Tab } from 'react-bootstrap'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { FiChevronDown } from 'react-icons/fi'
-
+import { useTranslation } from 'react-i18next'
 import peterswim from '../assets/images/peter-swim.jpeg'
 import Teacher from './Teacher'
 import Students from './Students'
@@ -12,6 +12,9 @@ import Students from './Students'
 
 
 export default function Awards() {
+
+  const { t } = useTranslation()
+
   const [activeTab, setActiveTab] = useState(null)
   const navigate = useNavigate()
 
@@ -33,6 +36,7 @@ export default function Awards() {
   return (
     <>
       <div className="text-center py-5" >
+      {/* style={{ backgroundColor: '#f4f1c9'}} */}
       <motion.img
 className="swim-comp"
 src={peterswim}
@@ -41,7 +45,7 @@ initial={{ maskImage: 'repeating-linear-gradient(-0deg, black 0%, black 0%, tran
 animate={{ maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 100%, transparent 100%, transparent 100%)' }}
 transition={{ duration: 1.5, ease: 'easeInOut' }}
 />
-
+{/* <h3 className='achievements-h3'>Eredmények</h3> */}
         <Tabs
           id="awards-tabs"
           activeKey={activeTab}
@@ -50,10 +54,10 @@ transition={{ duration: 1.5, ease: 'easeInOut' }}
           variant='none'
           justify
         >
-          <Tab eventKey="teacher" title={<span>Mester <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }} /></span>}>
+          <Tab eventKey="teacher" title={<span>{t("master")} <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }} /></span>}>
             {activeTab === "teacher" && <Teacher />}
           </Tab>
-          <Tab eventKey="students" title={<span>Tanítványai <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }}/></span>}>
+          <Tab eventKey="students" title={<span>{t("students")} <FiChevronDown style={{ strokeWidth: 2, opacity: 0.9 }}/></span>}>
             {activeTab === "students" && <Students />}
           </Tab>
         </Tabs>

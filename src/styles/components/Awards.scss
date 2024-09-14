@@ -1,11 +1,15 @@
 .swim-comp {
-  margin: 5em 0 2em 0;
+  margin: 5em 0;
   width: 40%;
   height: auto;
   align-self: center;
   object-fit: cover;
 }
 
+// .achievements-h3{
+//   font-style: italic;
+//   margin: 2em;
+// }
 
 .nav {
   display: flex;
@@ -34,10 +38,4 @@ p.chakra-text {
   margin: 0;
 }
 
-
-
-.medals, .szazhalombatta-pic, .slovenia-pic, .gyula-pic, .torokbalint-pic, .trophy-pic, .diplom-pic, .EB-pic {
-  width: 450px;
-  height: 350px;
-}
 

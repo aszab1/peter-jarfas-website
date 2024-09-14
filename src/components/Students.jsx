@@ -16,7 +16,8 @@ const pageVariants = {
 const pageTransition = {
   type: "tween",
   ease: "anticipate",
-  duration: 0.5,
+  duration: 1,
+  delay: 0.1,
 }
 
 
@@ -52,7 +53,7 @@ const Students = () => {
                 description={t("studentAchievement1")}
                 objectFit='cover'
               />
-            
+
               <ImageCard
                 imageSrc={podiumboy}
                 altText="Picture of Peters student"
@@ -62,7 +63,6 @@ const Students = () => {
               />
               <ImageCard
                 imageSrc={medalgirl}
-                style={{}}
                 altText="Picture of Peter and his student, Luca"
                 title={t("studentName3")}
                 description={t("studentAchievement3")}
