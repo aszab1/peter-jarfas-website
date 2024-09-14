@@ -22,6 +22,13 @@ export default function Awards() {
     navigate('/')
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    })
+  }
+
   const handleTabSelect = (k) => {
     if (activeTab === k) {
       setActiveTab(null) // Deselect the tab if it's already active
@@ -62,7 +69,10 @@ transition={{ duration: 1.5, ease: 'easeInOut' }}
           </Tab>
         </Tabs>
       </div>
-      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
-    </>
+      <div className='button-container'>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='guidance:right-arrow' /></button>
+      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='guidance:up-arrow'/></button>
+      </div>   
+      </>
   )
 }

@@ -56,49 +56,49 @@ const Teacher = () => {
             >
               <ImageCard
                 imageSrc={belgradpic}
-                alt='Picture of Peter in Belgrad'
+                altText='Picture of Peter in Belgrad'
                 description={t("belgradEB")}
                 objectFit='contain'
               />
               <ImageCard
                 imageSrc={peterDiplom}
-                alt='Picture of Peter holding his certificates'
+                altText='Picture of Peter holding his certificates'
                 description={t("diplom")}
                 objectFit='contain'
               />
               <ImageCard
                 imageSrc={peterTrophy}
-                alt='Picture of Peter holding a trophy'
+                altText='Picture of Peter holding a trophy'
                 description={t("thophyPic")}
                 objectFit='contain'
               />
               <ImageCard
                 imageSrc={peterTorokbalint}
-                alt='Picture of Peter sitting on podium'
+                altText='Picture of Peter sitting on podium'
                 description={t("torokbalint")}
                 objectFit='cover'
               />
               <ImageCard
                 imageSrc={peterPetike}
-                alt='Picture of Peter standing on podium with his son'
+                altText='Picture of Peter standing on podium with his son'
                 description={t("gyula")}
                 objectFit='contain'
               />
               <ImageCard
                 imageSrc={peterSlovenia}
-                alt='Picture of Peter in Slovak National Championship'
+                altText='Picture of Peter in Slovak National Championship'
                 description={t("slovenia")}
                 objectFit='cover'
               />
               <ImageCard
                 imageSrc={peterWithTeammates}
-                alt='Picture of Peter and his team mates in Szazhalombatta'
+                altText='Picture of Peter and his team mates in Szazhalombatta'
                 description={t("szazhalombatta")}
                 objectFit='contain'
               />
               <ImageCard
                 imageSrc={medals}
-                alt='Picture of Peters medals from 2018'
+                altText='Picture of Peters medals from 2018'
                 description={t("medals")}
                 objectFit='cover'
               />

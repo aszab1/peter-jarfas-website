@@ -18,8 +18,14 @@ import {
   FormErrorMessage,
 } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons'
+import { useTranslation } from 'react-i18next'
+import PropTypes from 'prop-types'
+
 
 export default function ReviewFormModal({ onSubmit }) {
+
+  const { t } = useTranslation()
+
   const { isOpen, onOpen, onClose } = useDisclosure()
   //  onCloseComplete to the above
   const finalRef = useRef(null)
@@ -72,7 +78,7 @@ export default function ReviewFormModal({ onSubmit }) {
           boxShadow: 'none !important',
         }}
       >
-        Leave a Review
+        {t("reviewBtn")}
       </button>
       <Modal
         size={'lg'}
@@ -98,10 +104,10 @@ export default function ReviewFormModal({ onSubmit }) {
               <form onSubmit={handleSubmit}>
                 <Stack spacing={6}>
                   <FormControl id="name" isRequired isInvalid={!!errors.name}>
-                    <FormLabel>Név</FormLabel>
+                    <FormLabel>{t("name")}</FormLabel>
                     <Input
                       type="text"
-                      placeholder="Enter your name"
+                      placeholder={t("enterName")}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     />
@@ -112,7 +118,7 @@ export default function ReviewFormModal({ onSubmit }) {
                     <FormLabel>Email</FormLabel>
                     <Input
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder={t("enterEmail")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -120,7 +126,7 @@ export default function ReviewFormModal({ onSubmit }) {
                   </FormControl>
 
                   <FormControl id="rating" isRequired>
-                    <FormLabel>How many stars?</FormLabel>
+                    <FormLabel>{t("stars")}</FormLabel>
                     <HStack>
                       {[...Array(5)].map((_, i) => (
                         <IconButton
@@ -136,10 +142,10 @@ export default function ReviewFormModal({ onSubmit }) {
                   </FormControl>
 
                   <FormControl id="review" isRequired>
-                    <FormLabel>Your Review</FormLabel>
+                    <FormLabel>{t("review")}</FormLabel>
                     <Textarea
                       h="200px"
-                      placeholder="Write your review here..."
+                      placeholder={t("enterReview")}
                       value={review}
                       onChange={(e) => setReview(e.target.value)}
                     />
@@ -148,7 +154,7 @@ export default function ReviewFormModal({ onSubmit }) {
                   {errors.submit && <FormErrorMessage>{errors.submit}</FormErrorMessage>}
 
                   <button className="slide-button" type="submit">
-                    Submit
+                    {t("submit")}
                   </button>
                 </Stack>
               </form>
@@ -158,4 +164,8 @@ export default function ReviewFormModal({ onSubmit }) {
       </Modal>
     </ChakraProvider>
   )
+}
+
+ReviewFormModal.propTypes = {
+  onSubmit: PropTypes.func.isRequired, 
 }

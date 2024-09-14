@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { FormControl, FormLabel, Flex } from '@chakra-ui/react'
 import Switch from '@mui/material/Switch'
 import { styled } from '@mui/material/styles'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 
@@ -87,6 +88,7 @@ function App() {
 
   return (
     <>
+    <ScrollToTop />
     <main>
     <Flex justifyContent="flex-end" alignItems="center" paddingTop={14} paddingEnd={80} style={{backgroundColor: 'inherit',}}>
           <FormControl display="flex" alignItems="center">

@@ -5,11 +5,14 @@ import ReviewFormModal from './ReviewFormModal'
 import { db } from '../utils/fireBaseConfig.js'
 import { collection, addDoc, getDocs, query, where, orderBy } from 'firebase/firestore'
 import { StarIcon } from '@chakra-ui/icons'
-import { Box, Flex, Text, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Box, Flex, Text, Heading, SimpleGrid } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 
 
 export default function Reviews() {
+
+  const { t } = useTranslation()
 
   const navigate = useNavigate()
   const [reviews, setReviews] = useState([])
@@ -28,6 +31,13 @@ export default function Reviews() {
 
   const handleBackClick = () => {
     navigate('/')
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    })
   }
 
   const handleReviewSubmit = async ({ name, email, rating, review }, setError) => {
@@ -62,7 +72,7 @@ export default function Reviews() {
 
   return (
     <>
-      <h3 className='reviews-h'>Vélemények</h3>
+      <h3 className='reviews-h'>{t("testimonials")}</h3>
       <ReviewFormModal onSubmit={handleReviewSubmit} />
       <div className='div-grid'>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
@@ -111,7 +121,10 @@ export default function Reviews() {
         ))}
       </SimpleGrid>
       </div>
-      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
+      <div className='button-container'>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='guidance:right-arrow' /></button>
+      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='guidance:up-arrow'/></button>
+      </div>   
     </>
   )
 }

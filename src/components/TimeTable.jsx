@@ -12,6 +12,13 @@ export default function Classes() {
     navigate('/')
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    })
+  }
+
 
   const timeTableData = {
     HÉTFŐ: [
@@ -62,15 +69,16 @@ export default function Classes() {
         ))}
       </div>
       <div>
-        <h5>***</h5>
         <p>Kezdő: Vízhez szoktatás, merülés, valamint a gyors-, hát-, és mellúszás lábtempóinak elsajátítása.</p>
         <p>Haladó: A gyors-, hát-, és mellúszás kartempóinak elsajátítása.</p>
         <p>Úszó edzés: Állóképesség növelése, technika csiszolása, és kisebb versenyekre való felkészítés.</p>
       </div>
       <Pricelist />
 
-      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ep:back' /></button>
-
+      <div className='button-container'>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='guidance:right-arrow' /></button>
+      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='guidance:up-arrow'/></button>
+      </div>
 
     </>
   )

@@ -144,3 +144,37 @@ svg.bubbles2 {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.back-button {
+  width: 85px;
+  height: 55px;
+  border: none;
+  background-color: inherit;
+  color: #334459;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.up-button {
+  width: 85px;
+  height: 55px;
+  border: none;
+  background-color: inherit;
+  color: #334459;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}

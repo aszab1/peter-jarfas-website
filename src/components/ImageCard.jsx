@@ -61,7 +61,7 @@ export default function ImageCard({ imageSrc, altText, title, description, objec
 ImageCard.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   description: PropTypes.string.isRequired,
   objectFit: PropTypes.oneOf(['cover', 'contain']),
 }
