@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import '../styles/components/TimeTable.scss'
 import Pricelist from './Pricelist'
+import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box} from '@chakra-ui/react'
+
 import grouppic2 from '../assets/images/grouppic2.jpg'
 
 export default function Classes() {
@@ -69,9 +71,50 @@ export default function Classes() {
         ))}
       </div>
       <div>
-        <p>Kezdő: Vízhez szoktatás, merülés, valamint a gyors-, hát-, és mellúszás lábtempóinak elsajátítása.</p>
-        <p>Haladó: A gyors-, hát-, és mellúszás kartempóinak elsajátítása.</p>
-        <p>Úszó edzés: Állóképesség növelése, technika csiszolása, és kisebb versenyekre való felkészítés.</p>
+        <Box width="65%" margin="0 auto" >
+      <Accordion defaultIndex={[]} allowMultiple>
+  <AccordionItem borderBottom="1px solid" borderColor="whitesmoke">
+  <p className='accordion-title'>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left' >
+        Kezdő Kismedence
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </p>
+    <AccordionPanel pb={4} marginBottom={"1em"}>
+    Vízhez szoktatás, merülés, valamint a gyors-, hát-, és mellúszás lábtempóinak elsajátítása.
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem borderBottom="1px solid" borderColor="whitesmoke">
+    <p className='accordion-title'>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left'>
+        Haladó
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </p>
+    <AccordionPanel pb={4} marginBottom={"1em"}>
+    A gyors-, hát-, és mellúszás kartempóinak elsajátítása.
+    </AccordionPanel>
+  </AccordionItem>
+  <AccordionItem>
+  <p className='accordion-title'>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left'>
+        Úszó edzés
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </p>
+    <AccordionPanel pb={4} marginBottom={"1em"}>
+    Állóképesség növelése, technika csiszolása, és kisebb versenyekre való felkészítés.
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+</Box>
       </div>
       <Pricelist />
 
