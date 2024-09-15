@@ -10,7 +10,8 @@ import grouppic3 from '../assets/images/grouppic3.jpg'
 import swimlesson from '../assets/images/uszasoktatas.jpg'
 import negyen from '../assets/images/negyen.jpg'
 import fejes from '../assets/images/fejes-ugras.jpeg'
-import seniorGroupPic from '../assets/images/senior-group.jpg'
+import delfinek from '../assets/images/BP-delfinek.jpg'
+
 
 
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`
@@ -197,7 +198,7 @@ export default function Photos() {
         <div className='group'>
         <p>{t("senior1")}</p>
         <motion.img ref={seniorsRef}
-        className='senior-group' src={seniorGroupPic} alt="Peter with his swim team" 
+        className='senior-group' src={delfinek} alt="Peter with his swim team" 
         initial={false}
         animate={
           isLoaded && seniorsInView
@@ -241,9 +242,9 @@ export default function Photos() {
         <path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z" fill="#2384eb" stroke="none"></path>
       </svg>
       <div className='button-container'>
-      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='gravity-ui:arrow-chevron-left' /></button>
-      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='gravity-ui:arrow-chevron-up'/></button>
-      </div>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
+      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
+      </div>  
     </>
 
   )

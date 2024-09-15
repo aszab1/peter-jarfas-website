@@ -73,7 +73,7 @@ export default function Classes() {
       <div>
         <Box width="65%" margin="0 auto" >
       <Accordion defaultIndex={[]} allowMultiple>
-  <AccordionItem borderBottom="1px solid" borderColor="whitesmoke">
+  <AccordionItem borderBottom="1px solid" borderColor="black">
   <p className='accordion-title'>
       <AccordionButton>
         <Box as='span' flex='1' textAlign='left' >
@@ -87,7 +87,7 @@ export default function Classes() {
     </AccordionPanel>
   </AccordionItem>
 
-  <AccordionItem borderBottom="1px solid" borderColor="whitesmoke">
+  <AccordionItem borderBottom="1px solid" borderColor="black">
     <p className='accordion-title'>
       <AccordionButton>
         <Box as='span' flex='1' textAlign='left'>
@@ -119,9 +119,9 @@ export default function Classes() {
       <Pricelist />
 
       <div className='button-container'>
-      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='guidance:right-arrow' /></button>
-      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='guidance:up-arrow'/></button>
-      </div>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
+      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
+      </div>  
 
     </>
   )

@@ -34,18 +34,18 @@ export default function Videos() {
         videoTitle={t("video2")}
       />
       <YouTubeVideoCard
+        videoSrc="https://www.youtube.com/embed/JcOPP5TXlK8"
+        videoTitle={t("video3")}
+      />
+      {/* <YouTubeVideoCard
         videoSrc="https://www.youtube.com/embed/VideoID"
         videoTitle="xy"
-      />
-      <YouTubeVideoCard
-        videoSrc="https://www.youtube.com/embed/VideoID"
-        videoTitle="xy"
-      />
+      /> */}
 
       <div className='button-container'>
-        <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='guidance:right-arrow' /></button>
-        <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='guidance:up-arrow' /></button>
-      </div>
+      <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
+      <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
+      </div>  
     </div>
 
   )

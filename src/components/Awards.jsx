@@ -43,7 +43,7 @@ export default function Awards() {
   return (
     <>
       <div className="text-center py-5" >
-      {/* style={{ backgroundColor: '#f4f1c9'}} */}
+      
       <motion.img
 className="swim-comp"
 src={peterswim}
@@ -52,7 +52,7 @@ initial={{ maskImage: 'repeating-linear-gradient(-0deg, black 0%, black 0%, tran
 animate={{ maskImage: 'repeating-linear-gradient(-90deg, black 0%, black 100%, transparent 100%, transparent 100%)' }}
 transition={{ duration: 1.5, ease: 'easeInOut' }}
 />
-{/* <h3 className='achievements-h3'>Eredmények</h3> */}
+<h3 className='achievements-h3'>Eredmények</h3>
         <Tabs
           id="awards-tabs"
           activeKey={activeTab}

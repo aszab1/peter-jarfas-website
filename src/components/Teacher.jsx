@@ -6,7 +6,6 @@ import ImageCard from './ImageCard'
 
 import medals from '../assets/images/medals.jpg'
 import belgradpic from '../assets/images/belgrade-2024.jpeg'
-import peterWithTeammates from '../assets/images/peter-and-teammates.jpg'
 import peterSlovenia from '../assets/images/peter-slovenia.jpg'
 import peterDiplom from '../assets/images/peter-diplom.jpg'
 import peterPetike from '../assets/images/peter-petike.jpeg'
@@ -90,12 +89,7 @@ const Teacher = () => {
                 description={t("slovenia")}
                 objectFit='cover'
               />
-              <ImageCard
-                imageSrc={peterWithTeammates}
-                altText='Picture of Peter and his team mates in Szazhalombatta'
-                description={t("szazhalombatta")}
-                objectFit='contain'
-              />
+             
               <ImageCard
                 imageSrc={medals}
                 altText='Picture of Peters medals from 2018'

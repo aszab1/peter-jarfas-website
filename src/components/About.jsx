@@ -26,9 +26,9 @@ export default function About() {
         <p>{t("intro")}</p>
         <p> {t("goal1")}<br />{t("goal2")} <br />{t("goal3")}</p>
         
-        <p>{t("aboutComp1")}<br />{t("aboutComp2")} </p>
+        <p>{t("belief1")}<br />{t("belief2")}</p>
 
-        <p>{t("belief1")}<br />{t("belief2")}<br />{t("belief3")} <br /> {t("belief4")} </p>
+        <p>{t("aboutComp1")}<br />{t("aboutComp2")} <br /> {t("aboutComp3")} <br />{t("aboutComp4")} <br />{t("aboutComp5")}</p>
         </div>
       </motion.div>
     </div>

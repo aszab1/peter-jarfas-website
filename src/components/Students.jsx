@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import ImageCard from './ImageCard'
 import podiumboy from '../assets/images/podiumboy.png'
 import medalgirl from '../assets/images/medalgirl.jpg'
-import peterStudents from '../assets/images/peter-students.jpg'
 
 const pageVariants = {
   initial: { opacity: 0, x: "-100vw" },
@@ -46,13 +45,7 @@ const Students = () => {
               width="100%"
               margin={50}
             >
-              <ImageCard
-                imageSrc={peterStudents}
-                altText="Picture of Peter and his students during competition"
-                title={t("studentName1")}
-                description={t("studentAchievement1")}
-                objectFit='cover'
-              />
+             
 
               <ImageCard
                 imageSrc={podiumboy}
