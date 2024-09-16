@@ -86,11 +86,25 @@ function App() {
     },
   }))
 
+
+  useEffect(() => {
+    const root = document.getElementById('root');
+    const isBubblePage = location.pathname.includes('videos'); // Adjust as needed for other pages
+
+    if (isBubblePage) {
+      root.classList.add('bubble-bg-active');
+      root.classList.remove('default-bg'); // Ensure only one background is active
+    } else {
+      root.classList.remove('bubble-bg-active');
+      root.classList.add('default-bg'); // Set default background color
+    }
+  }, [])
+
   return (
     <>
     <ScrollToTop />
     <main>
-    <Flex justifyContent="flex-end" alignItems="center" paddingTop={14} paddingEnd={80} style={{backgroundColor: 'inherit',}}>
+    <Flex justifyContent="flex-end" alignItems="center" paddingTop={14} paddingEnd={80}>
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="language-switch" mb="0" mr={2}>
             </FormLabel>

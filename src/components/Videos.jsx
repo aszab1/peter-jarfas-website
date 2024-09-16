@@ -2,6 +2,7 @@ import YouTubeVideoCard from './YouTubeVideoCard'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import BubbleBg from './BubbleBg'
 
 
 export default function Videos() {
@@ -22,7 +23,7 @@ export default function Videos() {
   }
 
   return (
-    <div>
+    <BubbleBg>
 
       <YouTubeVideoCard
         videoSrc="https://www.youtube.com/embed/1YKE_UDI0fg"
@@ -46,7 +47,7 @@ export default function Videos() {
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
       <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
       </div>  
-    </div>
+    </BubbleBg>
 
   )
 }

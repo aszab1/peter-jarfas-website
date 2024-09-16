@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import peterswim from '../assets/images/peter-swim.jpeg'
 import Teacher from './Teacher'
 import Students from './Students'
+import BubbleBg from './BubbleBg'
 
 
 
@@ -41,7 +42,7 @@ export default function Awards() {
 
 
   return (
-    <>
+    <BubbleBg>
       <div className="text-center py-5" >
       
       <motion.img
@@ -73,6 +74,6 @@ transition={{ duration: 1.5, ease: 'easeInOut' }}
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
       <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
       </div>   
-      </>
+      </BubbleBg>
   )
 }

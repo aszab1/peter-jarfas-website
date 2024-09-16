@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import '../styles/components/TimeTable.scss'
 import Pricelist from './Pricelist'
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box} from '@chakra-ui/react'
+import BubbleBg from './BubbleBg'
 
 import grouppic2 from '../assets/images/grouppic2.jpg'
 
@@ -54,7 +55,7 @@ export default function Classes() {
 
   const daysOfWeek = ['HÉTFŐ', 'KEDD', 'SZERDA', 'CSÜTÖRTÖK', 'PÉNTEK', 'SZOMBAT']
   return (
-    <>
+    <BubbleBg>
     <img className='students-in-pool' src={grouppic2} alt="Picture of Peter and his students in the pool" />
       <h2 className='timetable-h'>Órarend</h2>
       <div className="timetable">
@@ -123,6 +124,6 @@ export default function Classes() {
       <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
       </div>  
 
-    </>
+    </BubbleBg>
   )
 }

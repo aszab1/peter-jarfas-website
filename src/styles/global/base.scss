@@ -28,8 +28,18 @@ main {
   width: fit-content;
   margin: 0;
   padding: 0;
+}
+
+#root.default-bg {
   background-color: #82C4FF;
-  
+}
+
+/* Bubble background active */
+#root.bubble-bg-active {
+  background-color: transparent; /* This can be adjusted if you want some transparency */
+  background-image: url('your-svg-url'); /* Set this to the SVG background image or inherit from BubbleBg */
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .slide-button:focus,

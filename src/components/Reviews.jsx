@@ -7,6 +7,7 @@ import { collection, addDoc, getDocs, query, where, orderBy } from 'firebase/fir
 import { StarIcon } from '@chakra-ui/icons'
 import { Box, Flex, Text, Heading, SimpleGrid } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
+import BubbleBg from './BubbleBg.jsx'
 
 
 
@@ -71,7 +72,7 @@ export default function Reviews() {
 
 
   return (
-    <>
+    <BubbleBg>
       <h3 className='reviews-h'>{t("testimonials")}</h3>
       <ReviewFormModal onSubmit={handleReviewSubmit} />
       <div className='div-grid'>
@@ -125,6 +126,6 @@ export default function Reviews() {
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
       <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
       </div>   
-    </>
+      </BubbleBg>
   )
 }
