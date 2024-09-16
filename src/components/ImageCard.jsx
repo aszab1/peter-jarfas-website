@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Card, CardBody, Image, Stack, Text } from '@chakra-ui/react'
@@ -58,11 +57,4 @@ export default function ImageCard({ imageSrc, altText, title, description, objec
 }
 
 
-ImageCard.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
-  altText: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  description: PropTypes.string.isRequired,
-  objectFit: PropTypes.oneOf(['cover', 'contain']),
-}
 

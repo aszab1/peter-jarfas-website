@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons'
 import { useTranslation } from 'react-i18next'
-import PropTypes from 'prop-types'
+
 
 
 export default function ReviewFormModal({ onSubmit }) {
@@ -166,6 +166,3 @@ export default function ReviewFormModal({ onSubmit }) {
   )
 }
 
-ReviewFormModal.propTypes = {
-  onSubmit: PropTypes.func.isRequired, 
-}

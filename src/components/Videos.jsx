@@ -24,7 +24,8 @@ export default function Videos() {
 
   return (
     <BubbleBg>
-
+      
+      
       <YouTubeVideoCard
         videoSrc="https://www.youtube.com/embed/1YKE_UDI0fg"
         videoTitle={t("video1")}

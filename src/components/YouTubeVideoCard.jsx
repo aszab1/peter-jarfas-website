@@ -8,7 +8,7 @@ export default function YouTubeVideoCard({ videoSrc, videoTitle }) {
   const iframeRef = useRef(null)
 
   return (
-    <Card className='video-card' style={{ backgroundColor: 'lightyellow'}} sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+    <Card className='video-card' style={{ backgroundColor: 'white'}} sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
       <Box className='text-box' sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: '1 1 40%' }}> 
 
         <Typography component="div" variant="h6" sx={{ p: 2, whiteSpace: 'pre-line', textAlign: 'center'  }}>
