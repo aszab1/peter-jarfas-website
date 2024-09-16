@@ -2,12 +2,15 @@ import { useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import '../styles/components/TimeTable.scss'
 import Pricelist from './Pricelist'
+import { useTranslation } from 'react-i18next'
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box} from '@chakra-ui/react'
 import BubbleBg from './BubbleBg'
 
 import grouppic2 from '../assets/images/grouppic2.jpg'
 
 export default function Classes() {
+
+  const { t } = useTranslation()
 
   const navigate = useNavigate()
 
@@ -24,45 +27,47 @@ export default function Classes() {
 
 
   const timeTableData = {
-    HÉTFŐ: [
-      { time: '17:15 - 18:00', class: 'Kezdő Kismedence' },
-      { time: '18:00 - 18:45', class: 'Haladó Kismedence' },
+    [t("monday")] : [
+      { time: '17:15 - 18:00', class: t("beginner")},
+      { time: '18:10 - 18:55', class: t("advanced")},
+      { time: '19:00 - 19:45', class: t("swimmer")},
     ],
-    KEDD: [
-      { time: '17:50 - 18:35', class: 'Nagymedencés' },
-      { time: '18:35 - 19:45', class: 'Úszó Edzés'},
+    [t("tuesday")] : [
+      { time: '17:50 - 18:35', class: t("swimmer")},
+      { time: '18:35 - 19:20', class: t("training")},
     ],
-    SZERDA: [
-      { time: '17:15 - 18:00', class: 'Kezdő Kismedence' },
-      { time: '18:00 - 18:45', class: 'Haladó Kismedence' },
+    [t("wednesday")] : [
+      { time: '17:15 - 18:00', class: t("advanced")},
+      { time: '18:15 - 19:00', class: t("swimmer")},
     ],
-    CSÜTÖRTÖK: [
-      { time: '17:50 - 18:35', class: 'Nagymedencés' },
-      { time: '18:35 - 19:45', class: 'Úszó Edzés'},
+    [t("thursday")] : [
+      { time: '17:50 - 18:35', class: t("swimmer")},
+      { time: '18:35 - 19:20', class: t("training")},
     ],
-    PÉNTEK: [
-      { time: '14:00 - 14:45', class: 'Kezdő Kisvizes' },
-      { time: '17:15 - 18:00', class: 'Haladó'},
+    [t("friday")] : [
+      { time: '16:00 - 16:45', class: t("beginner")},
+      { time: '17:15 - 18:00', class: t("advanced")},
     ],
-    SZOMBAT: [
-      { time: '10 - 10:45', class: 'Úszó Edzés' },
-      { time: '11 - 11:45', class: 'Kezdő' },
-      { time: '12 - 12:45', class: 'Haladó Kisvizes' },
+    [t("saturday")] : [
+      { time: '10:05 - 10:50', class: t("training")},
+      { time: '11:00 - 11:45', class: t("beginner")},
+      { time: '12:00 - 12:45', class: t("advanced")},
+      { time: '13:00 - 13:45', class: t("swimmer")},
 
     ],
   }
 
 
-  const daysOfWeek = ['HÉTFŐ', 'KEDD', 'SZERDA', 'CSÜTÖRTÖK', 'PÉNTEK', 'SZOMBAT']
+  const daysOfWeek = [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday")]
   return (
     <BubbleBg>
     <img className='students-in-pool' src={grouppic2} alt="Picture of Peter and his students in the pool" />
-      <h2 className='timetable-h'>Órarend</h2>
+      <h2 className='timetable-h'>{t("timetable")}</h2>
       <div className="timetable">
         {daysOfWeek.map(day => (
           <div key={day} className="day-column">
             <div className="header-item">{day}</div>
-            {timeTableData[day].map((item, index) => (
+            {timeTableData[day]?.map((item, index) => (
               <div key={index} className="class-item">
                 <span className="time">{item.time}</span>
                 <span className="class-name">{item.class}</span>
@@ -78,13 +83,13 @@ export default function Classes() {
   <p className='accordion-title'>
       <AccordionButton>
         <Box as='span' flex='1' textAlign='left' >
-        Kezdő Kismedence
+        {t("beginner")}
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </p>
     <AccordionPanel pb={4} marginBottom={"1em"}>
-    Vízhez szoktatás, merülés, valamint a gyors-, hát-, és mellúszás lábtempóinak elsajátítása.
+    {t("beginnerContent")}
     </AccordionPanel>
   </AccordionItem>
 
@@ -92,26 +97,39 @@ export default function Classes() {
     <p className='accordion-title'>
       <AccordionButton>
         <Box as='span' flex='1' textAlign='left'>
-        Haladó
+       {t("advanced")}
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </p>
     <AccordionPanel pb={4} marginBottom={"1em"}>
-    A gyors-, hát-, és mellúszás kartempóinak elsajátítása.
+    {t("advancedContent")}
+    </AccordionPanel>
+  </AccordionItem>
+  <AccordionItem borderBottom="1px solid" borderColor="black">
+  <p className='accordion-title'>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left'>
+        {t("swimmer")}
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </p>
+    <AccordionPanel pb={4} marginBottom={"1em"}>
+    {t("swimmerContent")}
     </AccordionPanel>
   </AccordionItem>
   <AccordionItem>
   <p className='accordion-title'>
       <AccordionButton>
         <Box as='span' flex='1' textAlign='left'>
-        Úszó edzés
+        {t("training")}
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </p>
     <AccordionPanel pb={4} marginBottom={"1em"}>
-    Állóképesség növelése, technika csiszolása, és kisebb versenyekre való felkészítés.
+   {t("trainingContent")}
     </AccordionPanel>
   </AccordionItem>
 </Accordion>

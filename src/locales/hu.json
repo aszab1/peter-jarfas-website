@@ -43,5 +43,22 @@
   "enterReview": "Írd ide a véleményed...",
   "stars": "Hány csillagot adsz?",
   "submit": "Küldés",
-  "testimonials": "Vélemények"
+  "testimonials": "Vélemények",
+  "monday": "HÉTFŐ",
+  "tuesday": "KEDD",
+  "wednesday": "SZERDA",
+  "thursday": "CSÜTÖRTÖK",
+  "friday": "PÉNTEK",
+  "saturday": "SZOMBAT",
+  "beginner": "Kezdő",
+  "advanced": "Haladó",
+  "swimmer": "Úszó",
+  "training": "Edzés",
+  "timetable": "Órarend",
+  "prices": "Árak",
+  "beginnerContent": "Tanmedencés foglalkozás. Vízmélység: 90 - 70 cm. Vízhőmérséklet: 29-30 fok. Kötéllel leválasztva a tanmedence sekélyebb részén keresztbe (6 méter) történő feladatok végzésével. Az itt tanuló gyerekek lába leér a medence aljára, így maximális biztonságban tudják feladatokat végrehajtani. Cél: Vízbiztonság megszerzése, merülés elsajátítása, 3 féle lábtempó megtanítása (gyors, hát, mell).",
+  "advancedContent": "Tanmedencés foglalkozás. Aki önállóan végig tudja lábtempózni hosszában (12,5 méter) a medencét legalább 2 fajta lábtempóval. Vízmélység: 120 - 70 cm. Vízhőmérséklet: 29-30 fok. Az oktató vízben segíti a gyerekeket, illetve javítja a mozdulatokat. Cél: kartempók elsajátítása, fejesugrás megtanulása, eszköz nélküli önálló úszás 12,5 méteren keresztül.",
+  "swimmerContent": "25 méteres medencében történő foglalkozás. Vízmélység: 180 - 120 cm. Vízhőmérséklet: 27-28 fok. Az oktató a medence partjáról adja a feladatokat és javítja a hibás mozdulatokat. Cél: állóképesség javítása, 50 méter egybefüggő leúszása szabályosan, rajtkőről való indulás és a fordulók megtanítása.",
+  "trainingContent": " Az oktató által kiválasztott gyerekek kisebb versenyekre való felkészítése. Az újonnan érkező edzésre járni kívánó gyerekeket előzetesen felméri az edző! Terheléses óra, ahol sokszor elérkezünk teljesítőképességünk határához."
+
 }

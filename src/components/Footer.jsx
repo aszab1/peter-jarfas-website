@@ -19,7 +19,6 @@ export default function Footer(){
         </div>
       </div>
       <div className="footer-div">
-        <p className="footer-p">&copy; Peter Jarfas •</p>
         <p className="footer-p2">Website by <a className="adrienn" href="https://www.adriennszabo.com/" target="_blank" rel="noopener noreferrer">Adrienn Szabo</a>
         </p>
       </div>

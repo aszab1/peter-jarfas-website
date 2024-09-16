@@ -25,7 +25,7 @@ export default function Videos() {
   return (
     <BubbleBg>
       
-      
+      <div className='yTvid-div'>
       <YouTubeVideoCard
         videoSrc="https://www.youtube.com/embed/1YKE_UDI0fg"
         videoTitle={t("video1")}
@@ -48,6 +48,7 @@ export default function Videos() {
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
       <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
       </div>  
+      </div>
     </BubbleBg>
 
   )

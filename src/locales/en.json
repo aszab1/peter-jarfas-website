@@ -43,6 +43,18 @@
   "enterReview": "Write your review here...",
   "stars": "How many stars?",
   "submit": "Submit",
-  "testimonials": "Testimonials"
+  "testimonials": "Testimonials",
+  "monday": "MONDAY",
+  "tuesday": "TUESDAY",
+  "wednesday": "WEDNESDAY",
+  "thursday": "THURSDAY",
+  "friday": "FRIDAY",
+  "saturday": "SATURDAY",
+  "beginner": "Beginner",
+  "advanced": "Advanced",
+  "swimmer": "Swimmer",
+  "training": "Training",
+  "timetable": "Timetable",
+  "prices": "Prices"
 
 }
