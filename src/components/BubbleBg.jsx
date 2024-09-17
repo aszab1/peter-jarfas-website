@@ -2,7 +2,7 @@
 const BubbleBg = ({ children }) => {
   // Function to generate the bubble SVG string
   const generateBubbleSVG = () => {
-    const bubbles = Array.from({ length: 40 }, () => ({
+    const bubbles = Array.from({ length: 30 }, () => ({
       cx: Math.random() * 100,
       cy: Math.random() * 100,
       r: Math.random() * 3 + 0.3,

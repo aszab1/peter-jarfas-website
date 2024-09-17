@@ -8,6 +8,7 @@ import Switch from '@mui/material/Switch'
 import { styled } from '@mui/material/styles'
 import ScrollToTop from './components/ScrollToTop'
 import './App.css'
+import { color } from 'framer-motion'
 
 function App() {
   const { i18n } = useTranslation()
@@ -55,7 +56,8 @@ function App() {
             height: '100%',
             width: '100%',
             fontSize: 12,
-            color: '#dabc76',
+            fontWeight: 500,
+            color: '#fcfcf2',
           },
         },
         '& + .MuiSwitch-track': {
@@ -65,7 +67,7 @@ function App() {
       },
     },
     '& .MuiSwitch-thumb': {
-      backgroundColor: '#fff',
+      backgroundColor: '#fcfcf2',
       width: 32,
       height: 32,
       '&:before': {
@@ -76,7 +78,8 @@ function App() {
         height: '100%',
         width: '100%',
         fontSize: 12,
-        color: 'black',
+        fontWeight: 500,
+        color: '#334459',
       },
     },
     '& .MuiSwitch-track': {
@@ -85,6 +88,31 @@ function App() {
       backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
       boxSizing: 'border-box',
     },
+    // Media query for larger screens to scale up to 1.3x
+    [theme.breakpoints.up('md')]: {
+      width: 80.6,
+      height: 44.2,
+      padding: 9.1,
+      '& .MuiSwitch-switchBase': {
+        transform: 'translateX(7.8px)',
+        '&.Mui-checked': {
+          transform: 'translateX(28.6px)',
+          '& .MuiSwitch-thumb': {
+            '&:before': {
+              fontSize: 15.6,
+            },
+          },
+        },
+      },
+      '& .MuiSwitch-thumb': {
+        width: 41.6,
+        height: 41.6,
+        '&:before': {
+          fontSize: 15.6,
+        },
+      },
+    },
+
   }))
 
   // Switch background color based on the location

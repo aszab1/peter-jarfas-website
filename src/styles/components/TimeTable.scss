@@ -7,7 +7,7 @@
 }
 
 .timetable-h {
-  margin-top: 3em;
+  margin-top: 4em;
 }
 
 .grid-header {
@@ -18,7 +18,7 @@
   font-weight: bold;
   text-align: center;
   padding: 15px;
-  background-color: #f0f0f0;
+  background-color: #eaeaea;
 }
 
 .grid-body {
@@ -60,8 +60,8 @@
 
 .price-list-title {
   font-size: 2em;
-  margin: 2em 0;
-  color: #333;
+  margin: 3em 0 1.5em 0;
+  
 }
 
 .price-cards-container {
@@ -73,7 +73,7 @@
 
 .price-card {
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 25px;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -86,16 +86,19 @@
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #555;
+  
 }
 
 .price-detail {
   font-size: 1em;
+  padding: 2.5em 0.2em;
   margin-bottom: 10px;
   color: #777;
 }
 
 .price-amount {
   font-size: 1.2em;
+  padding: 1em 0.2em;
   font-weight: bold;
   color: #000;
 }

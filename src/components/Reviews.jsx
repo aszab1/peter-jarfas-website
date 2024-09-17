@@ -8,6 +8,7 @@ import { StarIcon } from '@chakra-ui/icons'
 import { Box, Flex, Text, Heading, SimpleGrid } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import BubbleBg from './BubbleBg.jsx'
+import stars from '../assets/images/stars5.png'
 
 
 
@@ -73,6 +74,7 @@ export default function Reviews() {
 
   return (
     <BubbleBg>
+      <img className='review-img' src={stars} alt="" />
       <h3 className='reviews-h'>{t("testimonials")}</h3>
       <ReviewFormModal onSubmit={handleReviewSubmit} />
       <div className='div-grid'>
