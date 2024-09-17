@@ -6,20 +6,76 @@
   object-fit: cover;
 }
 
-// .achievements-h3{
-//   font-style: italic;
-//   margin: 2em;
-// }
+.podium-container {
+  margin-top: 6em;
+  margin-bottom: 0;
+}
+
+#awards-tabs {
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  border-radius: 3px;
+  // background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  height: 125px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.achievements-text{
+  // margin-top: 1em;
+  margin-bottom: 0;
+  padding: 1.5em;
+  font-weight: 550;
+  transform: translateX(150%); 
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  // background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 .nav {
   display: flex;
   margin-top: 50px;
   font-size: 25px;
+  font-weight: 500;
+}
+
+
+.trophy {
+  width: 65px;
+  height: 65px;
+  // color: #dabc76;
+
 }
 
 button.nav-link {
   height: 60px;
   color: black;
+  transition: color 0.3s ease;
+}
+
+button.nav-link:hover {
+  color: #f0aa60;
+  color: #ebf28c;
+  color: #dabc76;
+}
+
+button.nav-link:focus,
+button.nav-link:active,
+button.nav-link.active {
+  color: black;
+  outline: none; 
+}
+
+button.nav-link.active:hover {
+  color: #dabc76 !important;
 }
 
 div.chakra-card {

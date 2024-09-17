@@ -26,7 +26,7 @@ export default function ImageCard({ imageSrc, altText, title, description, objec
       <Card
         maxW="100%"
         // bg="#badfff"
-        bg="#c4e4ff"
+        bg="#f0f8ff"
         boxShadow="md"
         p={15}
         overflow="hidden"

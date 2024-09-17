@@ -15,7 +15,6 @@ export default function Footer(){
         <div className='socials'>
         <Icon className='youtube' icon='bi:youtube' onClick={() => window.open('https://www.youtube.com/@peterjarfas8805')}></Icon>
         <Icon className='insta' icon='ri:instagram-fill'></Icon>
-        <Icon className='facebook' icon='fe:facebook'></Icon>
         </div>
       </div>
       <div className="footer-div">
