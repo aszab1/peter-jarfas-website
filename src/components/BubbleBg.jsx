@@ -50,11 +50,12 @@ const BubbleBg = ({ children }) => {
   const containerStyle = {
     backgroundImage: `url("${generateBubbleSVG()}")`,
     backgroundRepeat: 'repeat',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'scroll', // either 'fixed' to 'scroll'
+    backgroundSize: 'fixed',
+    backgroundAttachment: 'fixed', // either 'fixed' to 'scroll'
     minHeight: '100vh',
     width: '100%',
     backgroundColor: 'inherit',
+    overflow: 'hidden',
   }
 
 

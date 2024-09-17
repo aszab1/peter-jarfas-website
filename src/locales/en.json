@@ -55,6 +55,27 @@
   "swimmer": "Swimmer",
   "training": "Training",
   "timetable": "Timetable",
-  "prices": "Prices"
+  "prices": "Prices",
+  "beginnerContent": "A session in the training pool. Water depth: 90 - 70 cm. Water temperature: 29-30°C.",
+  "beginnerContent1": "The area is roped off across the shallower part of the pool (6 meters) where tasks are performed.",
+  "beginnerContent2": "The children in this group can touch the bottom of the pool, ensuring they can complete tasks with maximum safety.",
+  "beginnerContent3": "Goal: To develop water confidence, learn to submerge, and master three types of leg kicks (freestyle, backstroke, and breaststroke).",
+  "advancedContent": "A session in the training pool. Water depth: 120 - 70 cm. Water temperature: 29-30°C.",
+  "advancedContent1": "Suitable for those who can independently swim the length of the pool (12.5 meters) using at least two different types of leg kicks.",
+  "advancedContent2": "The instructor assists the children in the water and corrects their movements as needed.",
+  "advancedContent3": "Goal: To master arm strokes, learn diving, and achieve independent swimming without equipment over a distance of 12.5 meters.",
+  "swimmerContent": "A session held in a 25-meter pool. Water depth: 180 - 120 cm. Water temperature: 27-28°C.",
+  "swimmerContent1": "The instructor provides instructions and corrects form from the poolside.",
+  "swimmerContent2": "Goal: To improve endurance, swim 50 meters continuously with proper technique, learn to dive from the starting block, and master flip turns.",
+  "trainingContent": "Preparation for smaller competitions for children selected by the instructor.",
+  "trainingContent1": "Children wishing to join the training sessions for the first time are assessed by the coach in advance.",
+  "trainingContent2": "This is an intensive class where participants often push themselves to their physical limits, reaching the boundaries of their performance capabilities.",
+  "groupClass": "Group Classes",
+  "groupSize": "Minimum participation of 4 people",
+  "groupPrice": "2500 HUF / session",
+  "oneOnone": "Private Lessons",
+  "oneOnoneTime": "45 minutes",
+  "oneOnOnePrice": "10,000 HUF / session"
+
 
 }
