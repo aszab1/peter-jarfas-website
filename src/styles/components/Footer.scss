@@ -6,36 +6,34 @@
   height: auto;
 }
 
-.footer-p {
-  text-align: center;
-  margin: 0.5em;
-}
-
-.phone-nr, .email-p {
-  font-size: 17px;
-  margin: 0 auto;
-  padding: 0 19px; 
-}
 
 .contact {
   background-color: #334459;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   padding: 10px 20px;
   color: #dabc76;
   font-weight: 400;
+  padding-left: 5em; // take this out for resp des
 }
 
 .location-div, .phone-div, .email-div, .socials {
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-grow: 1;
+  flex: 1;
   justify-content: center;
-  margin: 1.5em 1em;
+  padding: 1em;
+  margin: 1.5em 0;
   
+}
+
+.phone-nr, .email-p {
+  font-size: 17px;
+  margin: 0;
+  padding: 0 10px; 
 }
 
 .phone{
@@ -44,17 +42,26 @@
 }
 
 .location-p {
-  padding: 1em;
+  padding: 0 12px;
+  margin-top: 1em;
+  font-size: 17px;
 }
 
-.phone-nr, .email-p {
-  margin-left: 1px;
-}
 
-.email, .insta, .location  {
+.email {
   width: 35px;
-  height: 35px;
+  height: 35px; 
+}
+
+.insta {
+  width: 35px;
+  height: 33.1px; 
   
+}
+
+.location {
+  width: 37px;
+  height: 37px;
 }
 
 .youtube {

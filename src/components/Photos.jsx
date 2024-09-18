@@ -57,7 +57,7 @@ export default function Photos() {
 
 
   return (
-    <>
+    <div style={{ backgroundColor: '#82C4FF' }}>
 
       <div className='swim-div'>
       <p>{t("swimLesson")}</p>
@@ -245,7 +245,7 @@ export default function Photos() {
       <button className="back-button" onClick={handleBackClick}><Icon className='back-button' icon='ri:arrow-left-double-fill' /></button>
       <button className='up-button' onClick={scrollToTop}><Icon className='up-button' icon='ri:arrow-up-double-fill'/></button>
       </div>  
-    </>
+    </div>
 
   )
 }

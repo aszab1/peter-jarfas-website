@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 import Footer from './components/Footer'
 import { useTranslation } from 'react-i18next'
 import './i18n'
@@ -8,12 +8,11 @@ import Switch from '@mui/material/Switch'
 import { styled } from '@mui/material/styles'
 import ScrollToTop from './components/ScrollToTop'
 import './App.css'
-import { color } from 'framer-motion'
+
 
 function App() {
   const { i18n } = useTranslation()
   const [isHun, setIsHun] = useState(true)
-  const location = useLocation()
 
   // Set default language to Hungarian only on the first mount
   useEffect(() => {
@@ -115,23 +114,20 @@ function App() {
 
   }))
 
-  // Switch background color based on the location
-  const bgColor = location.pathname === '/' || location.pathname === '/kepek' ? '#82C4FF' : '#60A6F0'
 
   return (
     <>
       <ScrollToTop />
-      <main style={{ backgroundColor: bgColor }}>
+      <main >
         <Flex
           justifyContent="flex-end"
           alignItems="center"
-          paddingTop={24}
+          paddingTop={25}
           paddingEnd={80}
           width="auto"
           position="absolute"
           right={0}
           zIndex={1000}
-          style={{ backgroundColor: bgColor, paddingTop: '25px', paddingRight: '35px' }}
         >
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="language-switch" mb="0" mr={2}></FormLabel>
