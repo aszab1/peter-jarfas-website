@@ -92,7 +92,7 @@ export default function Reviews() {
   <circle cx="58" cy="45" r="4" fill="black" />
 </svg>
 
-      <h4 className='reviews-h'>{t("testimonials")}</h4>
+      <h4 className='reviews-h' style={{fontWeight: 450}}>{t("testimonials")}</h4>
       </div>
       
       <div className='div-grid'>

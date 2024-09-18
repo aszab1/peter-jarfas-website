@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100%;
   margin: 0;
-  height: 50px;
+  height: auto;
 }
 
 .footer-p {
@@ -11,15 +11,78 @@
   margin: 0.5em;
 }
 
+.phone-nr, .email-p {
+  font-size: 17px;
+  margin: 0 auto;
+  padding: 0 19px; 
+}
+
+.contact {
+  background-color: #334459;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  color: #dabc76;
+  font-weight: 400;
+}
+
+.location-div, .phone-div, .email-div, .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  margin: 1.5em 1em;
+  
+}
+
+.phone{
+  width: 40px;
+  height: 40px;
+}
+
+.location-p {
+  padding: 1em;
+}
+
+.phone-nr, .email-p {
+  margin-left: 1px;
+}
+
+.email, .insta, .location  {
+  width: 35px;
+  height: 35px;
+  
+}
+
+.youtube {
+  width: 40px;
+  height: 50px;
+}
+
+
+.youtube, .insta {
+  margin: 0 5px;
+  cursor: pointer;
+}
 
 
 .footer-div {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background: #3b4e66;
-  color: #81ADC8;
+  color: #60a6f0;
   font-weight: 200;
+}
+
+.footer-p2 {
+  padding: 20px;
+  margin: 0;
+  margin-right: 4em;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .adrienn {
@@ -28,61 +91,6 @@
   font-style: normal;
 }
 
-.contact {
-  height: 200px;
-  background-color: #334459;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 20px;
+.adrienn:hover {
   color: #dabc76;
-  font-weight: 400;
-}
-
-.phone{
-  width: 40px;
-  height: 40px;
-  padding: 1px;
-}
-
-.youtube {
-  width: 40px;
-  height: 60px;
-  padding: 1px;
-  cursor: pointer;
-}
-
-.phone-div, .email-div, .socials {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: center;
-  // margin-left: 5em;
-}
-
-.email-div{
-  margin-right: 5em;
-}
-
-.phone-nr, .email-p {
-  padding: 5px;
-  font-size: 20px;
-  margin-left: 0.5em;
-}
-
-.email, .facebook, .insta  {
-  width: 35px;
-  height: 35px;
-  padding: 1px;
-}
-
-.facebook {
-  border-radius: 40%;
-}
-
-.youtube, .insta, .facebook{
-  margin: 4px;
 }

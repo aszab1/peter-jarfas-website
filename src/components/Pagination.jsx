@@ -10,7 +10,15 @@ export default function Pagination({ totalReviews, reviewsPerPage, currentPage, 
   const handlePageChange = (pageNumber) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber)
+      scrollToTop()
     }
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    })
   }
 
   return (
@@ -24,6 +32,7 @@ export default function Pagination({ totalReviews, reviewsPerPage, currentPage, 
           size='lg'
           border='none'
           _hover={{ transform: 'scale(1.20)'}} 
+          
           
         >{t("prev")}</Button>
       )}

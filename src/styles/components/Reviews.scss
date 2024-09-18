@@ -57,12 +57,16 @@
   display: flex;
   align-items: center; 
   justify-content: center;
-  margin: 8em auto; 
+  margin: 6em auto; 
+  margin-bottom: 10em;
   position: relative;
 }
 
 .reviews-h{
   padding: 10px;
+  // font-style: italic;
+  font-weight: 450;
+  
 }
 
 .review-svg {
@@ -84,11 +88,12 @@
 .div-grid{
   margin: 2em auto;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1250px;
 }
 
 .review-box {
   margin: 0.5em 0;
+  border-radius: 5px;
 }
 
 

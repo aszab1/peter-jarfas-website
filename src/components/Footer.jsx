@@ -4,6 +4,10 @@ export default function Footer(){
   return(
     <footer className="footer">
       <div className="contact">
+        <div className='location-div'>
+          <Icon className='location' icon='fa6-solid:location-dot'></Icon>
+          <p className='location-p'>Koppány-Völgye Tanuszoda <br />Tab, Kossuth Lajos u. 172</p>
+        </div>
         <div className='phone-div'>
       <Icon className='phone' icon='line-md:phone-call'></Icon>
         <p className='phone-nr'>30/60594345</p>
