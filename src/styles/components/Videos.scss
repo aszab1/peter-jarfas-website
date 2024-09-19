@@ -16,4 +16,11 @@
 iframe {
   width: 550px;
   height: 400px;
+  transition: none;
+  transform: none;
+}
+
+iframe:hover {
+  transition: none;
+  transform: none;
 }

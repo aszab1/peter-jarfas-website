@@ -6,7 +6,7 @@ export default function Footer(){
       <div className="contact">
         <div className='location-div'>
           <Icon className='location' icon='fa6-solid:location-dot'></Icon>
-          <p className='location-p'>Koppány-Völgye Tanuszoda <br />Tab, Kossuth Lajos u. 172</p>
+          <p className='location-p'>Koppány-Völgye Tanuszoda, <br />Tab, Kossuth Lajos u. 172</p>
         </div>
         <div className='phone-div'>
       <Icon className='phone' icon='line-md:phone-call'></Icon>
@@ -17,7 +17,7 @@ export default function Footer(){
         <p className='email-p'>jarfaspeter@gmail.com</p>
         </div>
         <div className='socials'>
-        <Icon className='youtube' icon='bi:youtube' onClick={() => window.open('https://www.youtube.com/@peterjarfas8805')}></Icon>
+        <Icon className='youtubeIcon' icon='bi:youtube' onClick={() => window.open('https://www.youtube.com/@peterjarfas8805')}></Icon>
         <Icon className='insta' icon='ri:instagram-fill'></Icon>
         </div>
       </div>

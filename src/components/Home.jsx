@@ -37,6 +37,7 @@ export default function Home() {
   }
   }, [])
 
+  
   const photoScaleAnimation = useSpring({
     transform: hoveredIcon === 'photo' ? 'translateX(-50%) scale(1.1)' : 'translateX(-50%) scale(1)',
     config: { tension: 300, friction: 10 },
@@ -44,7 +45,7 @@ export default function Home() {
 
   const scaleAnimation = useSpring({
     scale: hoveredIcon && hoveredIcon !== 'photo' ? 1.1 : 1,
-    config: { tension: 300, friction: 10 },
+    config: { tension: 200, friction: 20 },
   })
 
   // Handle touch events for mobile to mimic hover
