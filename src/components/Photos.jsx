@@ -10,7 +10,7 @@ import grouppic3 from '../assets/images/grouppic3.jpg'
 import swimlesson from '../assets/images/uszasoktatas.jpg'
 import negyen from '../assets/images/negyen.jpg'
 import fejes from '../assets/images/fejes-ugras.jpeg'
-import delfinek from '../assets/images/BP-delfinek.jpg'
+import delfinek from '../assets/images/BP-Delfinek.jpg'
 
 
 
@@ -38,7 +38,8 @@ export default function Photos() {
   const swimLessonRef = useRef(null)
   const swimGroupPicRef = useRef(null)
   const swimGroupPic1Ref = useRef(null)
-  const girlsRef = useRef(null)
+  const girlsPic1Ref = useRef(null)
+  const girlsPic2Ref = useRef(null)
   const diveRef = useRef(null)
   const negyenRef = useRef(null)
   const seniorsRef = useRef(null)
@@ -48,8 +49,9 @@ export default function Photos() {
   const swimLessonInView = useInView(swimLessonRef, { once: true })
   const swimGroupPicInView = useInView(swimGroupPicRef, { once: true })
   const swimGroupPic1InView = useInView(swimGroupPicRef, { once: true })
-  const girlsInView = useInView(girlsRef, { once: true })
-  const diveInView = useInView(diveRef, { once: true })
+  const girlsPic1InView = useInView(girlsPic1Ref, { once: true })
+  const girlsPic2InView = useInView(girlsPic2Ref, { once: true })
+    const diveInView = useInView(diveRef, { once: true })
   const negyenInView = useInView(negyenRef, { once: true })
   const seniorsInView = useInView(seniorsRef, { once: true })
 
@@ -135,11 +137,11 @@ export default function Photos() {
       </svg>
       <div style={{backgroundColor: '#4d9aeb', stroke: 'none'}}>
       <div className='girls'>
-        <motion.img ref={girlsRef} className='pic1' 
+        <motion.img ref={girlsPic1Ref} className='pic1' 
           src={pic1} alt="with one of the student"
           initial={false}
           animate={
-            isLoaded && girlsInView
+            isLoaded && girlsPic1InView
               ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
               : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
           }
@@ -148,10 +150,10 @@ export default function Photos() {
           onLoad={() => setIsLoaded(true)}
         />
         <p>{t("girls")}</p>
-        <motion.img ref={girlsRef} className='pic2' src={pic2} alt="with one of the student" 
+        <motion.img ref={girlsPic2Ref} className='pic2' src={pic2} alt="with one of the student" 
         initial={false}
         animate={
-          isLoaded && girlsInView
+          isLoaded && girlsPic2InView
             ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
             : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
         }

@@ -10,7 +10,7 @@ export default function Footer(){
         </div>
         <div className='phone-div'>
       <Icon className='phone' icon='line-md:phone-call'></Icon>
-        <p className='phone-nr'>30/60594345</p>
+        <p className='phone-nr'>+36 70 611 6611</p>
         </div>
         <div className='email-div'>
         <Icon className='email' icon='streamline:send-email'></Icon>
