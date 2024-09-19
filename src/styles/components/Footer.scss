@@ -16,7 +16,7 @@
   padding: 10px 20px;
   color: #dabc76;
   font-weight: 400;
-  padding-left: 5em; // take this out for resp des
+  padding-left: 5em; 
 }
 
 .location-div, .phone-div, .email-div, .socials {
@@ -86,6 +86,10 @@
   background: #3b4e66;
   color: #60a6f0;
   font-weight: 200;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .footer-p2 {
@@ -104,4 +108,64 @@
 
 .adrienn:hover {
   color: #107bee;
+}
+
+@media (max-width: 1100px) {
+  .contact {
+    padding: 5px 10px;
+    padding-left: 20px;
+  }
+
+  .location-div, .phone-div, .email-div {
+    padding: 10px;
+    margin: 1em 0;
+  }
+  .socials {
+    margin: 1em 0;
+    padding: 0;
+  }
+  .phone-nr, .email-p, .location-p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 999px) {
+  .phone, .youtubeIcon, .location{
+    width: 35px;
+  }
+  .email, .insta{
+    width: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 10px;
+  }
+  .phone-nr, .email-p, .location-p, .footer-p2 {
+    font-size: 13px;
+  }
+
+  .location-div, .phone-div, .email-div, .socials {
+    padding: 5px;
+    margin: 0;
+  }
+
+  .email{
+    width: 25px;
+  }
+  .phone, .location {
+    width: 30px;
+  }
+  .insta, .youtubeIcon{
+    margin: 0 10px 0 0;
+  }
+  .footer-p2{
+    margin: 5px;
+  }
+
+
 }
