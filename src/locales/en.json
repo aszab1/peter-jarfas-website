@@ -79,7 +79,13 @@
   "achievements": "Achievements",
   "moreVideos": "For more videos, visit my YouTube channel! Click the link at the bottom of the page.",
   "prev": "Previous",
-  "next": "Next"
+  "next": "Next",
+  "photos": "PHOTOS",
+  "videos": "VIDEOS",
+  "awards": "ACHIEVEMENTS",
+  "timetableDiv": "TIMETABLE \n/PRICES",
+  "reviews": "REVIEWS"
+
 
 
 }

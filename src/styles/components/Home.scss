@@ -51,6 +51,8 @@
   top: -20%;
   left: 50%;
   transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
   
 }
 
@@ -65,15 +67,21 @@
   border: 7px solid rgba(116, 58, 34, 255);
   background-color: rgba(135, 64, 32, 255);
   transition: transform 0.2s ease;
+  transform-origin: center;
 }
 
-// .photo-div:hover,
-.logo-conatiner:hover,
+
 .video-div:hover,
 .awards-div:hover,
 .classes-div:hover,
 .reviews-div:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.photo-div:hover{
+  transform: translate(-50%) scale(1.1);
+  cursor: pointer;
 }
 
 
@@ -104,5 +112,32 @@
   background-repeat: no-repeat; 
   background-position: center; 
   height: 100vh;
+}
+
+.hover-text {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(231, 182, 77, 255);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+  padding: 0;
+  margin: 25px auto;
+  height: 100%;
+}
+
+.classes-div{
+  .hover-text{
+    margin: 18px auto;
+    font-size: 11px;
+  }
+}
+
+.awards-div, .reviews-div {
+  .hover-text{
+    font-size: 10px;
+  }
 }
 

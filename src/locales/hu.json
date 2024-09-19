@@ -79,6 +79,12 @@
   "achievements": "Eredmények",
   "moreVideos": "További videókért látogass el YouTube csatornámra! Kattints az oldal alján lévő linkre.",
   "prev": "Elöző",
-  "next": "Következő"
+  "next": "Következő",
+  "photos": "KÉPEK",
+  "videos": "VIDEÓK",
+  "awards": "EREDMÉNYEK",
+  "timetableDiv": "ÓRAREND \n/ÁRAK",
+  
+  "reviews": "VÉLEMÉNYEK"
 
 }
