@@ -16,20 +16,20 @@ function App() {
 
   // Set default language to Hungarian only on the first mount
   useEffect(() => {
-    if (localStorage.getItem('language')) {
-      const savedLang = localStorage.getItem('language')
+    if (sessionStorage.getItem('language')) {
+      const savedLang = sessionStorage.getItem('language')
       i18n.changeLanguage(savedLang)
       setIsHun(savedLang === 'hu')
     } else {
       i18n.changeLanguage('hu')
-      localStorage.setItem('language', 'hu')
+      sessionStorage.setItem('language', 'hu')
     }
   }, [i18n])
 
   const toggleLanguage = () => {
     const newLang = isHun ? 'en' : 'hu'
     i18n.changeLanguage(newLang)
-    localStorage.setItem('language', newLang)
+    sessionStorage.setItem('language', newLang)
     setIsHun(!isHun)
   }
 

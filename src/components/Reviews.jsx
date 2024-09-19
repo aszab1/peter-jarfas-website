@@ -112,7 +112,7 @@ export default function Reviews() {
             key={review.id}
             p={6}
             shadow="md"
-            background="rgba(255, 255, 255, 0.7)"
+            background="rgba(255, 255, 255, 0.9)"
             borderRadius="md"
             
           >

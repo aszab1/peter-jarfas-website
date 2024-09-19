@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../assets/images/logo.png'
 import { Icon } from '@iconify/react'
 import { Link as RouterLink } from 'react-router-dom'
@@ -17,6 +17,20 @@ export default function Home() {
   const handleAboutClick = () => {
     setIsFlipped(false)
   }
+
+  useEffect(() => {
+
+    const flipHappened = sessionStorage.getItem('hasFlippedOnce')
+
+  if (!flipHappened) {
+    const timer = setTimeout(() => {
+      setIsFlipped(true)
+      sessionStorage.setItem('hasFlippedOnce', true)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }
+  }, [])
 
   return (
     <div className='home-container'>
