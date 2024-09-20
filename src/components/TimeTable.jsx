@@ -77,58 +77,58 @@ export default function Classes() {
         ))}
       </div>
       <div>
-        <Box width="65%" margin="0 auto" >
+        <Box width="65%" margin="0 auto" className='accordion-box'>
           <Accordion defaultIndex={[]} allowMultiple>
             <AccordionItem borderBottom="2px solid" borderColor="black">
               <p className='accordion-title'>
-                <AccordionButton>
+                <AccordionButton _expanded={{ bg: '#60A6F0'}}>
                   <Box as='span' flex='1' textAlign='left' style={{color: 'black'}}>
                     {t("beginner")}
                   </Box>
                   <AccordionIcon style={{color: 'black'}} />
                 </AccordionButton>
               </p>
-              <AccordionPanel pb={4} marginBottom={"1em"}>
+              <AccordionPanel pb={20} >
                 {t("beginnerContent")} <br /> {t("beginnerContent1")} <br /> {t("beginnerContent2")} <br /> {t("beginnerContent3")}
               </AccordionPanel>
             </AccordionItem>
 
             <AccordionItem borderBottom="2px solid" borderColor="black">
               <p className='accordion-title'>
-                <AccordionButton>
+                <AccordionButton _expanded={{ bg: '#60A6F0'}}>
                   <Box as='span' flex='1' textAlign='left' style={{color: 'black'}}>
                     {t("advanced")}
                   </Box>
                   <AccordionIcon style={{color: 'black'}} />
                 </AccordionButton>
               </p>
-              <AccordionPanel pb={4} marginBottom={"1em"}>
+              <AccordionPanel pb={20}>
                 {t("advancedContent")} <br /> {t("advancedContent1")} <br /> {t("advancedContent2")} <br /> {t("advancedContent3")}
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem borderBottom="2px solid" borderColor="black">
               <p className='accordion-title'>
-                <AccordionButton>
+                <AccordionButton _expanded={{ bg: '#60A6F0'}}> 
                   <Box as='span' flex='1' textAlign='left' style={{color: 'black'}}>
                     {t("swimmer")}
                   </Box>
                   <AccordionIcon style={{color: 'black'}}/>
                 </AccordionButton>
               </p>
-              <AccordionPanel pb={4} marginBottom={"1em"}>
+              <AccordionPanel pb={20}>
                 {t("swimmerContent")} <br /> {t("swimmerContent1")} <br /> {t("swimmerContent2")}
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
               <p className='accordion-title'>
-                <AccordionButton>
+                <AccordionButton _expanded={{ bg: '#60A6F0'}}>
                   <Box as='span' flex='1' textAlign='left' style={{color: 'black'}}>
                     {t("training")}
                   </Box>
                   <AccordionIcon style={{color: 'black'}}/>
                 </AccordionButton>
               </p>
-              <AccordionPanel pb={4} marginBottom={"1em"}>
+              <AccordionPanel pb={4} >
                 {t("trainingContent")} <br /> {t("trainingContent1")} <br /> {t("trainingContent2")}
               </AccordionPanel>
             </AccordionItem>

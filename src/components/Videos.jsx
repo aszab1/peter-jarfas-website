@@ -45,7 +45,7 @@ export default function Videos() {
         videoTitle="xy"
       /> */}
 
-<Typography variant="body1" sx={{ textAlign: 'center', mt: 4, fontWeight: 500, fontSize: 18}}>
+<Typography variant="body1" sx={{ textAlign: 'center', mt: 4, fontWeight: 500, fontSize: 18, fontFamily: "'Lora', serif"}}>
     {t("moreVideos")}
   </Typography>
       </div>

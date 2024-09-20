@@ -12,10 +12,14 @@ body {
 
 
 main {
-  font-size: 16px;
-  font-family: "Work Sans",sans-serif, Arial, Helvetica;
-  letter-spacing: 0.4px;
-  font-weight: 400;
+  font-size: 17px;
+  // font-family: "Work Sans",sans-serif, Arial, Helvetica;
+  font-family: "Lora", serif, sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-optical-sizing: auto;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: 600;
 
 }
 
@@ -41,6 +45,17 @@ main {
   background-color: #60A6F0; 
 }
 
+a, button, .icon, .youtubeIcon, .insta {
+  cursor: pointer;
+}
+
+a:hover, button:hover, .icon:hover, .youtubeIcon:hover, .insta:hover {
+  cursor: pointer;
+}
+
+.router-link, .router-link:hover {
+  cursor: pointer;
+}
 
 // .slide-button:focus,
 // .slide-button:active,
@@ -60,8 +75,8 @@ main {
 // }
 
 
-// @media only screen and (max-width: 450px) {
-//   main {
-//     font-size: 14px;
-//   }
-// }
+@media only screen and (max-width: 550px) {
+  main {
+    font-size: 15px;
+  }
+}

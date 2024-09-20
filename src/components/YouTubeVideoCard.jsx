@@ -11,7 +11,7 @@ export default function YouTubeVideoCard({ videoSrc, videoTitle }) {
     <Card className='video-card' style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)'}} sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
       <Box className='text-box' sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: '1 1 40%' }}> 
 
-        <Typography component="div" variant="h6" sx={{ p: 2, whiteSpace: 'pre-line', textAlign: 'center', fontWeight: 520  }}>
+        <Typography component="div" variant="h6" sx={{ p: 2, whiteSpace: 'pre-line', textAlign: 'center', fontWeight: 500, fontFamily: "'Lora', serif",  }}>
           {videoTitle} 
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'center', p: 1 }}>

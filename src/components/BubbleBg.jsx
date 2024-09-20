@@ -5,7 +5,7 @@ const BubbleBg = ({ children }) => {
     const bubbles = Array.from({ length: 30 }, () => ({
       cx: Math.random() * 100,
       cy: Math.random() * 100,
-      r: Math.random() * 3 + 0.3,
+      r: Math.random() * 2.8 + 0.2,
     }))
 
 
