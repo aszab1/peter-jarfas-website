@@ -14,11 +14,11 @@ export default function Footer(){
         </div>
         <div className='email-div'>
         <Icon className='email' icon='streamline:send-email'></Icon>
-        <p className='email-p'>jarfaspeter@gmail.com</p>
+        <p className='email-p'>knvb83@gmail.com</p>
         </div>
         <div className='socials'>
         <Icon className='youtubeIcon' icon='bi:youtube' onClick={() => window.open('https://www.youtube.com/@peterjarfas8805')}></Icon>
-        <Icon className='insta' icon='ri:instagram-fill'></Icon>
+        <Icon className='insta' icon='ri:instagram-fill' onClick={() => window.open('https://www.instagram.com/poseidontab?igsh=MTZvaTh6ZzM4NGh5bA==')}></Icon>
         </div>
       </div>
       <div className="footer-div">
