@@ -55,7 +55,6 @@ export default function Awards() {
         />
       <div className="text-center podium-container" >
         <div className='tabs-container'>
-        {/* <Icon className='trophy' icon='noto:trophy'></Icon> */}
         <Icon className='trophy' icon='game-icons:trophy-cup'></Icon>
         <h4 className='achievements-text' >{t("achievements")}</h4>
         <Tabs

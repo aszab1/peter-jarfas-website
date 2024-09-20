@@ -169,8 +169,20 @@
     
   }
   .footer-p2{
-    margin: 5px;
+    margin-right: 1em;
+    font-size: 13px;
+  } 
+}
+
+@media (max-width: 540px) {
+  .contact {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 8px;
+    justify-items: center; 
   }
 
-
+  .location-div{
+    padding-left: 10px;
+  }
 }

@@ -56,22 +56,18 @@ a:hover, button:hover, .icon:hover, .youtubeIcon:hover, .insta:hover {
   cursor: pointer;
 }
 
-// .slide-button:focus,
-// .slide-button:active,
-// .slide-button:focus-visible {
-//   outline: none !important;  
-//   box-shadow: none !important;  
-// }
+@media only screen and (max-width: 1209px) {
+  div.switch-div.css-16fmoxz {
+    padding: 15px;
+  }
+}
 
-// button:focus {
-//   outline: none !important; 
-//   box-shadow: none !important;
-// }
-
-// button:focus-visible {
-//   outline: none !important;
-//   box-shadow: none !important;
-// }
+@media only screen and (max-width: 897px) {
+  div.switch-div.css-1p0ve28 {
+    padding: 10px;
+  }
+  
+}
 
 
 @media only screen and (max-width: 550px) {
@@ -79,3 +75,4 @@ a:hover, button:hover, .icon:hover, .youtubeIcon:hover, .insta:hover {
     font-size: 15px;
   }
 }
+

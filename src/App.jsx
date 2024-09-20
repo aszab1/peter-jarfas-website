@@ -120,10 +120,11 @@ function App() {
       <ScrollToTop />
       <main >
         <Flex
+        className='switch-div'
           justifyContent="flex-end"
           alignItems="center"
           paddingTop={25}
-          paddingEnd={80}
+          paddingEnd={45}
           width="auto"
           position="absolute"
           right={0}
