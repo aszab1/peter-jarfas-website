@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import logo from '../assets/images/logo.png'
 import { Icon } from '@iconify/react'
 import { Link as RouterLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useSpring, animated } from '@react-spring/web'
 import { useTranslation } from 'react-i18next'
-import About from './About'
 
 
+// Lazy-load the About component
+const About = lazy(() => import('./About'))
 
 export default function Home() {
 
@@ -38,15 +38,6 @@ export default function Home() {
   }, [])
 
   
-  const photoScaleAnimation = useSpring({
-    transform: hoveredIcon === 'photo' ? 'translateX(-50%) scale(1.1)' : 'translateX(-50%) scale(1)',
-    config: { tension: 300, friction: 10 },
-  })
-
-  const scaleAnimation = useSpring({
-    scale: hoveredIcon && hoveredIcon !== 'photo' ? 1.1 : 1,
-    config: { tension: 200, friction: 20 },
-  })
 
   // Handle touch events for mobile to mimic hover
   const handleTouchStart = (iconName) => {
@@ -69,13 +60,15 @@ export default function Home() {
     <div className='home-container'>
       <div className='star-container'>
         <div className='content-container'>
-        <animated.div
+        <motion.div
             className='photo-div'
             onMouseEnter={() => handleMouseEnter('photo')}
             onMouseLeave={handleMouseLeave}
             onTouchStart={() => handleTouchStart('photo')}
             onTouchEnd={handleTouchEnd}
-            style={photoScaleAnimation}
+            initial={{ scale: 1, x: '-50%' }}
+            animate={hoveredIcon === 'photo' ? { scale: 1.1, x: '-50%' } : { scale: 1, x: '-50%' }}
+            transition={{ type: 'spring', stiffness: 300, damping: 10 }}
           >
           <RouterLink to="/kepek" style={{ textDecoration: 'none' }}>
           {hoveredIcon === 'photo' ? (
@@ -84,7 +77,7 @@ export default function Home() {
                 <Icon className='photo-icon' icon='fa-solid:camera-retro' />
               )}
             </RouterLink>
-          </animated.div>
+          </motion.div>
 
         <div className='logo-container' >
           <AnimatePresence mode='wait'>
@@ -102,6 +95,7 @@ export default function Home() {
               />
             )}
             {isFlipped && (
+              <Suspense fallback={<></>}>
               <motion.div
                 className='about-me'
                 initial={{ rotateY: -90, opacity: 0 }}
@@ -113,16 +107,19 @@ export default function Home() {
               >
                 <About />
               </motion.div>
+              </Suspense>
             )}
           </AnimatePresence>
         </div>
-        <animated.div
+        <motion.div
             className='video-div'
             onMouseEnter={() => handleMouseEnter('video')}
             onMouseLeave={handleMouseLeave}
             onTouchStart={() => handleTouchStart('video')}
             onTouchEnd={handleTouchEnd}
-            style={hoveredIcon === 'video' ? scaleAnimation : {}}
+            initial={{ scale: 1 }}
+            animate={hoveredIcon === 'video' ? { scale: 1.1 } : { scale: 1 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
           >
             <RouterLink to="/videok" style={{ textDecoration: 'none' }}>
               {hoveredIcon === 'video' ? (
@@ -131,15 +128,17 @@ export default function Home() {
                 <Icon className='video-icon' icon='hugeicons:camera-video' />
               )}
             </RouterLink>
-          </animated.div>
+          </motion.div>
 
-          <animated.div
+          <motion.div
             className='awards-div'
             onMouseEnter={() => handleMouseEnter('awards')}
             onMouseLeave={handleMouseLeave}
             onTouchStart={() => handleTouchStart('awards')}
             onTouchEnd={handleTouchEnd}
-            style={hoveredIcon === 'awards' ? scaleAnimation : {}}
+            initial={{ scale: 1 }}
+            animate={hoveredIcon === 'awards' ? { scale: 1.1 } : { scale: 1 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
           >
             <RouterLink to="/eredmenyek" style={{ textDecoration: 'none' }}>
               {hoveredIcon === 'awards' ? (
@@ -148,15 +147,17 @@ export default function Home() {
                 <Icon className='awards-logo' icon='game-icons:trophy-cup' />
               )}
             </RouterLink>
-          </animated.div>
+          </motion.div>
 
-          <animated.div
+          <motion.div
             className='classes-div'
             onMouseEnter={() => handleMouseEnter('classes')}
             onMouseLeave={handleMouseLeave}
             onTouchStart={() => handleTouchStart('classes')}
             onTouchEnd={handleTouchEnd}
-            style={hoveredIcon === 'classes' ? scaleAnimation : {}}
+            initial={{ scale: 1 }}
+            animate={hoveredIcon === 'classes' ? { scale: 1.1 } : { scale: 1 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
           >
             <RouterLink to='/orarend-arak' style={{ textDecoration: 'none' }}>
               {hoveredIcon === 'classes' ? (
@@ -165,15 +166,17 @@ export default function Home() {
                 <Icon className='schedule-logo' icon='grommet-icons:schedules' />
               )}
             </RouterLink>
-          </animated.div>
+          </motion.div>
 
-          <animated.div
+          <motion.div
             className='reviews-div'
             onMouseEnter={() => handleMouseEnter('reviews')}
             onMouseLeave={handleMouseLeave}
             onTouchStart={() => handleTouchStart('reviews')}
             onTouchEnd={handleTouchEnd}
-            style={hoveredIcon === 'reviews' ? scaleAnimation : {}}
+            initial={{ scale: 1 }}
+            animate={hoveredIcon === 'reviews' ? { scale: 1.1 } : { scale: 1 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
           >
             <RouterLink to='/velemenyek' style={{ textDecoration: 'none' }}>
               {hoveredIcon === 'reviews' ? (
@@ -182,7 +185,7 @@ export default function Home() {
                 <Icon className='comments-logo' icon='majesticons:comment-text-line' />
               )}
             </RouterLink>
-          </animated.div>
+          </motion.div>
       </div>
       </div>
       </div>

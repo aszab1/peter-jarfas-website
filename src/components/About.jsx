@@ -20,6 +20,7 @@ export default function About() {
           className="peter"
           src={peter}
           alt="Picture of Peter Jarfas"
+          loading="lazy"
         />
         
         <div className='text-div'>

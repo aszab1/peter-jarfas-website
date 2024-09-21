@@ -8,19 +8,45 @@
 
 
 .video-card {
-  margin: 2em auto;
+  margin: 3em auto;
   height: 500px;
   width: 65%;
+  border-radius: 3px;
 }
 
-iframe {
-  width: 550px;
-  height: 400px;
-  transition: none;
-  transform: none;
+
+
+p.video-p {
+  margin-top: 5em;
 }
 
-iframe:hover {
-  transition: none;
-  transform: none;
+
+@media only screen and (max-width: 1024px) {
+  .video-card{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .video-card{
+    width: 93%;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  iframe.yt-iframe {
+    margin: 5em;
+    width: fit-content;
+  }
+  
+  h6.chakra-heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 0 0;
+  }
+  p.video-p {
+    margin-top: 2em;
+    font-size: 16px;
+  }
 }

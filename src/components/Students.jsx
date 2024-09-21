@@ -1,6 +1,5 @@
-import { motion, } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Flex, Grid, Container } from '@chakra-ui/react'
-import { AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import ImageCard from './ImageCard'
 import podiumboy from '../assets/images/podiumboy.png'
