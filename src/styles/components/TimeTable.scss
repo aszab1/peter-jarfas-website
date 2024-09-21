@@ -265,7 +265,7 @@
 
 @media (max-width: 600px){
   .students-in-pool {
-    width: 350px;
+    width: 400px;
     height: auto;
   }
 
@@ -311,5 +311,15 @@
 
 }
 
+@media (max-width: 391px){
+  .students-in-pool {
+    width: 390px;
+  }
+}
 
+@media (max-width: 350px){
+  .students-in-pool {
+    width: 350px;
+  }
+}
 

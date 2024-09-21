@@ -31,7 +31,7 @@ export default function Home() {
     const timer = setTimeout(() => {
       setIsFlipped(true)
       sessionStorage.setItem('hasFlippedOnce', true)
-    }, 3000)
+    }, 2200)
 
     return () => clearTimeout(timer)
   }
