@@ -1,11 +1,33 @@
+import { useState, useEffect } from "react"
 
 const BubbleBg = ({ children }) => {
+  const [ isSmallScreen, setIsSmallScreen ] = useState()
+
+  // function to detect screen size
+  const updateScreenSize = () => {
+    setIsSmallScreen(window.matchMedia('(max-width: 897px)').matches)
+  }
+
+  useEffect(() => {
+    //init check
+    updateScreenSize()
+
+    //listener to monitor screen width changes
+    window.addEventListener('resize', updateScreenSize)
+    
+    //remove listener on comp unmount
+    return () => window.removeEventListener('resize', updateScreenSize)
+  }, [])
+
+
+
   // Function to generate the bubble SVG string
   const generateBubbleSVG = () => {
     const bubbles = Array.from({ length: 30 }, () => ({
       cx: Math.random() * 100,
       cy: Math.random() * 100,
-      r: Math.random() * 2.8 + 0.2,
+      //adjust radius based on screensize
+      r: isSmallScreen ? Math.random() * 1.6 + 0.3 : Math.random() * 2.8 + 0.2,
     }))
 
 
