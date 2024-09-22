@@ -441,11 +441,11 @@ svg.bubbles2 {
   }
   .girls {
     flex-wrap: wrap;
-    margin: -1px 1em;
+    margin: -1px 0.8em;
   }
   
   .pic1{
-    width: 33%;
+    width: 31%;
     margin: 1em 1em 0 2em;
   }
 
@@ -455,7 +455,7 @@ svg.bubbles2 {
   }
 
   .dive-div{
-    margin: 0;
+    margin: -1px 0;
     padding: 0;
   }
 
@@ -478,22 +478,30 @@ svg.bubbles2 {
 }
 
 @media only screen and (max-width: 355px) {
+
+  .swim-div {
+    margin: -5px 0.5em;
+  }
   .girls {
     flex-wrap: wrap;
     margin: -1px 0.5em;
   }
   
   .pic1{
-    width: 31%;
+    width: 30%;
     margin: 1em 1em 0 2em;
   }
 
   .pic2 {
-    width: 37%;
+    width: 36%;
     margin: 0 1.5em 0;
+  }
+  .dive-div{
+    margin: 0;
   }
   .dive{
     width: 260px;
     margin: 1em 0 1em 2em;
   }
+
 }
