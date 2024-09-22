@@ -63,7 +63,7 @@ export default function Photos() {
     <div style={{ backgroundColor: '#82C4FF' }}>
 
       <div className='swim-div'>
-      <p>{t("swimLesson")}</p>
+      <p className='photo-p'>{t("swimLesson")}</p>
 
         <motion.img ref={swimLessonRef}
           className='swim-lesson'
@@ -120,7 +120,7 @@ export default function Photos() {
             transition={{ duration: 1.5, delay: 1.5 }}
             viewport={{ once: true }}
             onLoad={() => setIsLoaded(true)} />
-            <p>{t("happyKids")}</p>
+            <p className='photo-p'>{t("happyKids")}</p>
             <svg
           className='bubbles1'
           xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export default function Photos() {
           viewport={{ once: true }}
           onLoad={() => setIsLoaded(true)}
         />
-        <p>{t("girls")}</p>
+        <p className='girls-p'>{t("girls")}</p>
         <motion.img ref={girlsPic2Ref} className='pic2' src={pic2} alt="with one of the student" 
         initial={false}
         animate={
@@ -198,8 +198,8 @@ export default function Photos() {
       </svg>
       
       <div className='senior-div' style={{ backgroundColor: '#2384eb' }}>
-        <div className='group'>
-        <p>{t("senior1")}</p>
+        <div className='group-senior'>
+        <p className='photo-p'>{t("senior1")}</p>
         <motion.img ref={seniorsRef}
         className='senior-group' src={delfinek} alt="Peter with his swim team" 
         initial={false}
@@ -228,7 +228,7 @@ export default function Photos() {
         viewport={{ once: true }}
         onLoad={() => setIsLoaded(true)}
         />
-        <p>{t("senior2")}</p>
+        <p className='photo-p'>{t("senior2")}</p>
         <svg
           className='bubbles3'
           xmlns="http://www.w3.org/2000/svg"
