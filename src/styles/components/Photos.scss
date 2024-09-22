@@ -46,7 +46,7 @@ p {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  margin: 0 11em;
+  margin: -1px 11em;
 }
 
 .group1 {
@@ -111,7 +111,7 @@ svg.bubbles2 {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  margin: -1px 5em -1px 0;
+  margin: -1px 5em 0 0;
   padding: 0;
   border: none;
 }
@@ -159,5 +159,168 @@ svg.bubbles2 {
 
 .swim-lesson, .uszoda, .swim-group-pic, .pic1, .pic2, .dive, .negyen, .senior-group {
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 1700px) {
+  .swim-div{
+    margin: -1px 6em;
+    padding-top: 1.5em;
+  }
+  .group, .group1 {
+    margin: 0 6em;
+  }
+  .group1{
+    margin-top: 3em;
+  }
+  .girls {
+    margin: -1px 6em;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .swim-div{
+    margin: -1px 1.5em;
+    padding-top: 1em
+  }
+
+  .swim-lesson {
+    width: 500px;
+    margin: 5em 5em 5em 2em;
+  }
+  .uszoda {
+    width: 600px;
+  }
+
+  svg.bubbles, svg.bubbles2{
+    width: 150px; 
+    height: 150px; 
+  }
+  svg.bubbles1, svg.bubbles3{
+    width: 130px; 
+    height: 130px; 
+  }
+  svg.bubbles3{
+    bottom: -12;
+  }
+  .group, .group1 {
+    margin: 0 1.5em;
+  }
+  .swim-group-pic{
+    width: 550px;
+  }
+  .pic1{
+    width: 250px;
+  }
+  .pic2{
+    width: 300px;
+  }
+  .group1{
+    margin-top: 2em;
+  }
+  .girls {
+    margin: -1px 1.5em;
+  }
+  .dive{
+    width: 550px;
+    margin-bottom: 1em;
+  }
+  .negyen, .senior-group  {
+    width: 550px;
+  }
+  .senior-group{
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  p{
+    font-size: 16.5px;
+    line-height: 1.3;
+  }
+  .swim-div{
+    margin: -1px 1em;
+    
+  }
+
+  .swim-lesson {
+    width: 400px;
+    margin: 5em 5em 5em 2em;
+  }
+  .uszoda {
+    width: 450px;
+  }
+
+  svg.bubbles, svg.bubbles2{
+    width: 125px; 
+    height: 125px; 
+  }
+  svg.bubbles1{
+    width: 100px; 
+    height: 100px; 
+  }
+  svg.bubbles3{
+    width: 80px;
+    height: 80px;
+
+  }
+  .group, .group1 {
+    margin: 0 1em;
+  }
+  .swim-group-pic{
+    width: 450px;
+  }
+  .pic1{
+    width: 200px;
+  }
+  .pic2{
+    width: 250px;
+  }
+  .group1{
+    margin-top: 2em;
+  }
+  .girls {
+    margin: -1px 1em;
+  }
+  .dive{
+    width: 450px;
+    margin-bottom: 1em;
+  }
+  .negyen, .senior-group  {
+    width: 450px;
+  }
+  .senior-group{
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  p {
+    padding: 20px;
+  }
+  .swim-div {
+    flex-direction: column-reverse;
+    margin: 0 6em;
+  }
+  .swim-lesson {
+    width: 500px;
+    margin: 3em 2em 1em;
+  }
+  .uszoda-div{
+    justify-content:end;
+  }
+  
+  .group{
+    flex-direction: column;
+    margin: 0 6em 0 1em;
+    padding-bottom: 1.5em;
+  }
+  .swim-group-pic{
+    margin: 1.5em 0 0.5em;
+  }
+
+  .girls{
+    flex-direction:column;
+  }
+
 }
 

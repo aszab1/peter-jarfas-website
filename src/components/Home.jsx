@@ -15,6 +15,7 @@ export default function Home() {
   const [isFlipped, setIsFlipped] = useState(false)
   const [hoveredIcon, setHoveredIcon] = useState(null)
 
+
   const handleLogoClick = () => {
     setIsFlipped(true)
   }
@@ -22,6 +23,8 @@ export default function Home() {
   const handleAboutClick = () => {
     setIsFlipped(false)
   }
+
+  
 
   useEffect(() => {
 
@@ -55,6 +58,8 @@ export default function Home() {
   const handleMouseLeave = () => {
     setHoveredIcon(null) // Reset on hover leave
   }
+
+  
 
   return (
     <div className='home-container'>

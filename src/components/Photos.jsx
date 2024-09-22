@@ -35,6 +35,7 @@ export default function Photos() {
     })
   }
 
+
   const swimLessonRef = useRef(null)
   const swimGroupPicRef = useRef(null)
   const swimGroupPic1Ref = useRef(null)

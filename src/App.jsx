@@ -1,4 +1,4 @@
-import { Outlet} from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
 import Footer from './components/Footer'
 import { useTranslation } from 'react-i18next'
 import './i18n'
@@ -8,11 +8,36 @@ import Switch from '@mui/material/Switch'
 import { styled } from '@mui/material/styles'
 import ScrollToTop from './components/ScrollToTop'
 import './App.css'
+import { AnimatePresence, motion } from 'framer-motion'
 
+
+const pageVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      when: 'beforeChildren',
+      staggerChildren: 0.3,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    transition: { duration: 0.5 },
+  },
+};
+
+const loadingVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.3 } },
+}
 
 function App() {
   const { i18n } = useTranslation()
   const [isHun, setIsHun] = useState(true)
+  const navigation = useNavigation()
 
   // Set default language to Hungarian only on the first mount
   useEffect(() => {
@@ -120,7 +145,7 @@ function App() {
       <ScrollToTop />
       <main >
         <Flex
-        className='switch-div'
+          className='switch-div'
           justifyContent="flex-end"
           alignItems="center"
           paddingTop={25}
@@ -135,7 +160,30 @@ function App() {
             <LanguageSwitch checked={!isHun} onChange={toggleLanguage} id="language-switch" />
           </FormControl>
         </Flex>
-        <Outlet />
+        <AnimatePresence mode='wait'>
+          {
+            navigation.state === 'idle' ? (
+              <motion.div
+                key="content"
+                ariants={pageVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              style={{ backgroundColor: '#60a6f0' }}
+              >
+                <Outlet />
+              </motion.div>
+            ) : (<motion.div
+              key="loading"
+              variants={loadingVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              style={{ backgroundColor: '#60a6f0' }}
+            >
+            </motion.div>
+            )}
+        </AnimatePresence>
         <Footer />
       </main>
     </>
