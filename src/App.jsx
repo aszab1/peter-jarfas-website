@@ -150,6 +150,7 @@ function App() {
           alignItems="center"
           paddingTop={25}
           paddingEnd={45}
+          maxWidth="100%"
           width="auto"
           position="absolute"
           right={0}

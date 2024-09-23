@@ -1,58 +1,4 @@
 
-//   .slide-button {
-//     position: relative;
-//     display: inline-block;
-//     padding: 12px 20px;
-//     font-size: 16px;
-//     font-weight: 500;
-//     margin-top: 1em;
-//     background-color: transparent;
-//     cursor: pointer;
-//     overflow: hidden;
-//     transition: color 1s;
-//     z-index: 1;
-//     border: none;
-//     outline: none;
-// }
-
-// .slide-button::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: -70%;
-//     width: 100%;
-//     height: 100%;
-//     background: #3b4e66;
-//     transition: left 1s;
-//     z-index: -1;
-// }
-
-// .slide-button:hover::before {
-//     left: 0;
-// }
-
-// .slide-button:hover {
-//   color: #cbba93;
-//   outline: none;
-// }
-
-// .slide-button span {
-//     position: relative;
-//     z-index: 1;
-// }
-
-// .slide-button:focus,
-// .slide-button:active,
-// .slide-button:focus-visible {
-//     outline: none !important; 
-//     box-shadow: none !important;
-// }
-
-// .slide-button::-moz-focus-inner {
-//   border: 0; 
-// }
-
-
 .header-section {
   display: flex;
   align-items: center; 
@@ -64,7 +10,6 @@
 
 .reviews-h{
   padding: 10px;
-  // font-style: italic;
   font-weight: 450;
   
 }

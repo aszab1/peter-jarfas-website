@@ -20,6 +20,7 @@
 
 .photo-p, .girls-p {
   padding: 2em;
+  letter-spacing: 0.01em;
   font-weight: 500;
   justify-content: center;
   text-align: justify;
@@ -415,7 +416,7 @@ svg.bubbles2 {
   p, .girls-p {
     font-size: 15px;
     line-height: 1.2;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     padding: 20px 20px 30px;
   }
   .swim-lesson{
