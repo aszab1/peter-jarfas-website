@@ -10,11 +10,15 @@ export default function Footer(){
         </div>
         <div className='phone-div'>
       <Icon className='phone' icon='line-md:phone-call'></Icon>
-        <p className='phone-nr'>+36 70 611 6611</p>
+        <p className='phone-nr'>
+          <a className='footer-a' href="tel:+36706116611">+36 70 611 6611</a>
+          </p>
         </div>
         <div className='email-div'>
         <Icon className='email' icon='streamline:send-email'></Icon>
-        <p className='email-p'>knvb83@gmail.com</p>
+        <p className='email-p'>
+          <a className='footer-a' href='mailto:knvb83@gmail.com'>knvb83@gmail.com</a>
+        </p>
         </div>
         <div className='socials'>
         <Icon className='youtubeIcon' icon='bi:youtube' onClick={() => window.open('https://www.youtube.com/@peterjarfas8805')}></Icon>

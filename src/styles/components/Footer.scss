@@ -104,6 +104,17 @@
   font-weight: 300;
 }
 
+.footer-a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-a:hover{
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .adrienn {
   text-decoration: none;
   color: inherit;
@@ -132,6 +143,9 @@
   .phone-nr, .email-p, .location-p {
     font-size: 15px;
   }
+  .footer-a:hover{
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 999px) {
@@ -152,6 +166,9 @@
   }
   .phone-nr, .email-p, .location-p, .footer-p2 {
     font-size: 13px;
+  }
+  .footer-a:hover{
+    font-size: 14px;
   }
 
   .location-div, .phone-div, .email-div, .socials {
