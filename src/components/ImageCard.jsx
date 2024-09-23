@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import { Card, CardBody, Image, Stack, Text } from '@chakra-ui/react'
 
 const imageVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
+  hidden: { opacity: 0, scale: 0.9},
   visible: {
     opacity: 1,
     scale: 1,
@@ -22,10 +22,12 @@ export default function ImageCard({ imageSrc, altText, title, description, objec
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       variants={imageVariants}
+      className="image-card-container"
+    
+
     >
       <Card
         maxW="100%"
-        // bg="#badfff"
         bg="#f0f8ff"
         boxShadow="md"
         p={15}
