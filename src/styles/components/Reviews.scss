@@ -8,14 +8,9 @@
   position: relative;
 }
 
-.reviews-h{
-  padding: 10px;
-  font-weight: 450;
-  
-}
 
 .review-svg {
-  width: 10%;
+  width: 200px;
   margin: 2em;
   margin-right: 20px;
   margin-left: 100px;
@@ -27,7 +22,7 @@
 .reviews-h {
   font-size: 2em;
   margin: 0 auto;
-  font-weight: 550;
+  font-weight: 500;
 }
 
 .div-grid{
@@ -50,9 +45,9 @@
 }
 
 .slide-button {
-  margin-bottom: 1em;
   margin-right: 5px;
   padding: 10px 10px;
+  margin-bottom: 5px;
   font-size: 16px;
   font-weight: 500;
   background-color: #3b4e66; 
@@ -60,7 +55,6 @@
   border: none;
   border-radius: 3px; 
   cursor: pointer;
-  transition: color 1s;
   outline: none;
 }
 
@@ -77,7 +71,7 @@
 
 .pagination-button {
   padding: 0 !important;
-  margin: 0 4px !important; 
+  margin: 0 13px !important; 
 }
 
 .pagination-nrs {
@@ -85,4 +79,93 @@
   padding: 4px; 
 }
 
+p.chakra-text.reviews-text{
+  margin: 2em;
+  padding: 10px;
+}
 
+p.chakra-text.pagination-nrs{
+  padding: 2px;
+}
+
+select.chakra-select.dropdown{
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .review-svg {
+    margin: 2em;
+  }
+  h5.chakra-heading{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  p.chakra-text.time-p{
+    font-size: 15px;
+  }
+  p.chakra-text.reviews-text{
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .review-svg {
+    width: 200px;
+    margin: 2em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .review-svg {
+    width: 150px;
+    margin: 2em;
+  }
+  p.chakra-text.reviews-text{
+    margin: 1.5em;
+    padding: 0;
+  }
+  .reviews-h{
+    font-size: 27px;
+  }
+  .header-section{
+    margin-bottom: 8.5em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .review-svg {
+    width: 110px;
+    margin: 0.5em 1em 8em 0.5em;
+  }
+  p.chakra-text.reviews-text{
+    margin: 0.8em;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+  }
+  .reviews-h{
+    font-size: 22px;
+    padding-top: 2em;
+    
+  }
+  .header-section{
+    margin-bottom: 4.5em;
+  }
+  h5.chakra-heading{
+    font-size: 16px;
+    padding: 15px 10px 5px;
+  }
+  p.chakra-text.time-p{
+    font-size: 14px;
+    padding: 5px 7px 10px;
+  }
+  div.star-icon{
+    padding: 5px;
+  }
+  .slide-button{
+    font-size: 14.5px;
+    margin-bottom: 2px;
+  }
+  .pagination-button{
+    font-size: 15.5px;
+  }
+}

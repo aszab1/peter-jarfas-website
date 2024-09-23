@@ -66,6 +66,7 @@ export default function Pagination({ totalReviews, reviewsPerPage, currentPage, 
       </Flex>
       {currentPage < totalPages && (
         <Button
+          className="pagination-button"
           rightIcon={<ChevronRightIcon />}
           onClick={() => handlePageChange(currentPage + 1)}
           ml={2}
