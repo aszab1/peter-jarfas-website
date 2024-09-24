@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Flex, Grid, Container } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import ImageCard from './ImageCard'
-import podiumboy from '../assets/images/podiumboy.png'
+import podiumboy from '../assets/images/podiumboy.jpg'
 import medalgirl from '../assets/images/medalgirl.jpg'
 
 const pageVariants = {

@@ -1,4 +1,4 @@
-import peter from '../assets/images/peter.png'
+import peter from '../assets/images/peter.jpg'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
