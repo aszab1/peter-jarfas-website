@@ -10,7 +10,7 @@ import grouppic3 from '../assets/images/grouppic3.jpg'
 import swimlesson from '../assets/images/uszasoktatas.jpg'
 import negyen from '../assets/images/negyen.jpg'
 import fejes from '../assets/images/fejes-ugras.jpeg'
-import delfinek from '../assets/images/BP-Delfinek.jpg'
+import delfinek from '../assets/images/delfinek.jpg'
 
 
 
