@@ -81,7 +81,9 @@
   "videos": "VIDEOS",
   "awards": "ACHIEVEMENTS",
   "timetableDiv": "TIMETABLE \n/PRICES",
-  "reviews": "REVIEWS"
+  "reviews": "REVIEWS",
+  "emailError": "A review has already been submitted with this email address.",
+  "submitError": "Failed to submit the review. Please try again."
 
 
 

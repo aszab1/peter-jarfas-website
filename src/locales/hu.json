@@ -69,7 +69,7 @@
   "groupClass": "Csoportos órák",
   "groupSize": "Minimum 4 fő részvételével",
   "groupPrice": "2500 Ft / alkalom",
-  "oneOnone": "Egyéni úszás oktatás",
+  "oneOnone": "Egyéni úszásoktatás",
   "oneOnoneTime": "45 perc",
   "oneOnOnePrice": "10.000 Ft / alkalom",
   "achievements": "Eredmények",
@@ -81,6 +81,8 @@
   "awards": "EREDMÉNYEK",
   "timetableDiv": "ÓRAREND \n/ÁRAK",
   
-  "reviews": "VÉLEMÉNYEK"
+  "reviews": "VÉLEMÉNYEK",
+  "emailError": "Ezzel az e-mail címmel már küldtek egy értékelést.",
+  "submitError": "Az értékelés beküldése sikertelen. Kérjük, próbálja újra."
 
 }

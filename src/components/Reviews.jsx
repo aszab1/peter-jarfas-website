@@ -51,7 +51,7 @@ export default function Reviews() {
       const existingReviews = await getDocs(q)
 
       if (!existingReviews.empty) {
-        setError('email', 'A review has already been submitted with this email address.')
+        setError('email', t("emailError"))
         return
       }
 
@@ -68,7 +68,7 @@ export default function Reviews() {
       setReviews(updatedReviews.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
     } catch (error) {
       console.error('Error submitting review:', error)
-      setError('submit', 'Failed to submit the review. Please try again.')
+      setError('submit', t("submitError"))
     }
   }
 
@@ -113,8 +113,8 @@ export default function Reviews() {
       </div>
       
       <div className='div-grid'>
-      <Flex justifyContent="space-between" alignItems="center" width="100%" mb={4}>
-        <Box>
+      <Flex className='reviews-flex' justifyContent="space-between" alignItems="center" width="100%" mb={4}>
+        <Box >
       <Select variant='unstyled' className='dropdown' size='lg' h={35} onChange={handlePerPageChange} value={reviewsPerPage} icon={<></>}>
           <option value={10}>10</option>
           <option value={20}>20</option>

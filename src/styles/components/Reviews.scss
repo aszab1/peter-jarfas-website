@@ -1,4 +1,3 @@
-
 .header-section {
   display: flex;
   align-items: center; 
@@ -91,6 +90,11 @@ p.chakra-text.pagination-nrs{
 select.chakra-select.dropdown{
   width: 100%;
 }
+
+div.reviews-flex{
+  margin-bottom: 1.5em;
+}
+  
 
 @media only screen and (max-width: 1024px) {
   .review-svg {
