@@ -44,7 +44,6 @@ const Students = () => {
               width="100%"
               margin={50}
             >
-             
 
               <ImageCard
                 imageSrc={podiumboy}

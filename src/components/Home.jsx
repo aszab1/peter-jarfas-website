@@ -4,10 +4,8 @@ import { Icon } from '@iconify/react'
 import { Link as RouterLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import About from './About'
 
-
-// Lazy-load the About component
-const About = lazy(() => import('./About'))
 
 export default function Home() {
 
@@ -100,7 +98,6 @@ export default function Home() {
               />
             )}
             {isFlipped && (
-              <Suspense fallback={<></>}>
               <motion.div
                 className='about-me'
                 initial={{ rotateY: -90, opacity: 0 }}
@@ -112,7 +109,6 @@ export default function Home() {
               >
                 <About />
               </motion.div>
-              </Suspense>
             )}
           </AnimatePresence>
         </div>
