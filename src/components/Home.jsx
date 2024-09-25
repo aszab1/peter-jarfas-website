@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy, Suspense } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../assets/images/logo.png'
 import { Icon } from '@iconify/react'
 import { Link as RouterLink } from 'react-router-dom'
